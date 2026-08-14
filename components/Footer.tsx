@@ -8,6 +8,7 @@ const links = [
   { label: "Heritage · Àkọ́ọ́lẹ̀", href: "/heritage" },
   { label: "Magajis · Àwọn Mògájì", href: "/magajis" },
   { label: "Compounds · Agbo Ilé", href: "/compounds" },
+  { label: "Ilé Ẹ̀kẹ́ · Ìkọ́lé", href: "/ile-eke" },
   { label: "Stories · Ìtàn", href: "/stories" },
   { label: "About · Nípa Ẹgbẹ́", href: "/about" },
 ];

@@ -12,6 +12,7 @@ const navItems = [
   { label: "Heritage", yoruba: "Àkọ́ọ́lẹ̀", href: "/heritage" },
   { label: "Magajis", yoruba: "Àwọn Mògájì", href: "/magajis" },
   { label: "Compounds", yoruba: "Agbo Ilé", href: "/compounds" },
+  { label: "Ilé Ẹ̀kẹ́", yoruba: "Ìkọ́lé", href: "/ile-eke" },
   { label: "Stories", yoruba: "Ìtàn", href: "/stories" },
 ];
 
