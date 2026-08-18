@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   Building2,
   Shield,
@@ -11,6 +12,10 @@ import {
   Landmark,
   FileText,
   ChevronRight,
+  CheckCircle2,
+  Sparkles,
+  Eye,
+  History,
 } from "lucide-react";
 import Link from "next/link";
 import { fadeUp, fadeIn, staggerContainer, viewportOnce } from "@/lib/animations";
@@ -61,27 +66,65 @@ const constructionPhases = [
   {
     phase: "Phase 02",
     title: "Columns & Domed Roof Framework",
-    status: "In Progress",
-    date: "Current Phase",
-    desc: "Erection of reinforced concrete perimeter columns and custom structural steel domed roof trusses (as shown in live progress updates).",
+    status: "Completed",
+    date: "Q1 2025",
+    desc: "Erection of reinforced concrete perimeter columns and custom structural steel domed roof trusses.",
   },
   {
     phase: "Phase 03",
-    title: "Enclosure & Wall Cladding",
-    status: "Upcoming",
-    date: "Q3 2026",
-    desc: "Long-span roof decking installation, clay brick masonry, electrical conduits, and window apertures.",
+    title: "Facade, Enclosure & Exterior Finishes",
+    status: "Completed",
+    date: "Present State",
+    desc: "Roof decking, masonry, ceremonial portico, embossed lettering 'Gbọngan Mogaji Ilé Ẹ̀kẹ́', gold-crested pillars, and perimeter works.",
   },
   {
     phase: "Phase 04",
-    title: "Interior Finishes & Commissioning",
-    status: "Upcoming",
-    date: "Q4 2026",
+    title: "Interior Chambers & Commissioning",
+    status: "Final Stage",
+    date: "Target Q4 2026",
     desc: "Acoustic ceiling paneling, executive council seating, digital audio-visual setup, and grand royal commissioning.",
   },
 ];
 
+const galleryImages = [
+  {
+    id: "present-front",
+    title: "Ceremonial Portico & Facade",
+    subtitle: "Present Condition · Front Entrance",
+    src: "/images/ile-eke-present-2.jpg",
+    type: "Present",
+    badge: "Completed Exterior",
+    desc: "Direct elevation showing the embossed 'GBỌ̀NGÀN MÒGÁJÌ ILÉ Ẹ̀KẸ́' crest, crossed royal staffs, dual ceremonial staircases with stainless steel balustrades, and classical columns with gold capitols.",
+  },
+  {
+    id: "present-side",
+    title: "Side Colonnade & Campus Grounds",
+    subtitle: "Present Condition · Lateral Wing",
+    src: "/images/ile-eke-present-1.jpg",
+    type: "Present",
+    badge: "Completed Exterior",
+    desc: "Panoramic lateral view showcasing the expansive window apertures, curved roofline geometry, external lighting fixtures, and the surrounding highland landscape.",
+  },
+  {
+    id: "before-steel",
+    title: "Structural Domed Roof Framework",
+    subtitle: "Before / Construction Milestone",
+    src: "/images/ile-eke-project.jpg",
+    type: "Before",
+    badge: "Structural Phase",
+    desc: "Historical construction phase showing the lifting and assembly of heavy curved structural steel roof trusses and bare reinforced concrete support columns before wall enclosure.",
+  },
+];
+
 export default function IleEkePage() {
+  const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
+  const [filter, setFilter] = useState<"All" | "Present" | "Before">("All");
+
+  const filteredImages =
+    filter === "All"
+      ? galleryImages
+      : galleryImages.filter((img) => img.type === filter);
+
   return (
     <main className="min-h-screen bg-[#0d1627] text-[#f5f1e8]">
       <Navbar />
@@ -106,7 +149,7 @@ export default function IleEkePage() {
           {/* Title */}
           <div className="max-w-[950px]">
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#c8a85f] mb-3">
-              THE HALL OF COUNCIL
+              GBỌ̀NGÀN MÒGÁJÌ · THE HALL OF COUNCIL
             </p>
             <h1 className="font-display text-[clamp(3.2rem,7.5vw,7.5rem)] font-normal leading-[0.95] tracking-[-0.04em] text-white">
               Ilé Ẹ̀kẹ́ <span className="italic text-[#d4b56e]">Projects.</span>
@@ -120,114 +163,187 @@ export default function IleEkePage() {
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#progress-update"
+              href="#gallery-transformation"
               className="inline-flex items-center gap-3 bg-[#d4b56e] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#0d1627] transition hover:bg-[#b99a58] shadow-lg"
             >
-              View Live Progress <ChevronRight size={14} />
+              <Eye size={15} /> View Present Condition & Gallery <ChevronRight size={14} />
             </a>
-            <Link
-              href="/compounds"
+            <a
+              href="#progress-update"
               className="inline-flex items-center gap-3 border border-white/30 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-white/80 transition hover:border-white hover:text-white"
             >
-              Explore Family Compounds
-            </Link>
+              <History size={15} /> Transformation Journey
+            </a>
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          SECTION 2: LIVE CONSTRUCTION PROGRESS SPOTLIGHT
+          SECTION 2: PRESENT CONDITION & TRANSFORMATION SPOTLIGHT
       ========================================================= */}
-      <section id="progress-update" className="py-24 px-6 lg:px-14 bg-[#08111f] border-b border-white/10">
+      <section id="gallery-transformation" className="py-24 px-6 lg:px-14 bg-[#08111f] border-b border-white/10">
         <div className="mx-auto max-w-[1200px]">
+          {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-white/15 pb-6">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f] mb-2">
-                <HardHat size={15} className="text-[#d4b56e]" />
-                <span>ÌṢẸ̀ Ń LỌ · LIVE CONSTRUCTION UPDATE</span>
+                <Sparkles size={15} className="text-[#d4b56e]" />
+                <span>ÌKỌ́LÉ LỌ́WỌ́LỌ́WỌ́ · BUILDING CONDITION & TRANSFORMATION</span>
               </div>
               <h2 className="font-display text-3xl md:text-5xl text-white">
-                Construction Site Progress
+                Present Condition: Gbọ̀ngàn Mògájì
               </h2>
             </div>
 
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#d4b56e]/50 bg-[#0d1627] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#d4b56e]">
-              <span className="h-2 w-2 rounded-full bg-[#d4b56e] animate-ping" />
-              Phase 02 Underway
-            </span>
+            {/* Filter Tabs */}
+            <div className="flex items-center gap-2 rounded-lg border border-white/15 bg-[#121c30] p-1.5">
+              {(["All", "Present", "Before"] as const).map((tab) => (
+                <button
+                  key={tab}
+                  type="button"
+                  onClick={() => setFilter(tab)}
+                  className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition-all ${
+                    filter === tab
+                      ? "bg-[#d4b56e] text-[#0d1627] shadow-md"
+                      : "text-white/60 hover:text-white"
+                  }`}
+                >
+                  {tab === "Present"
+                    ? "Present Condition"
+                    : tab === "Before"
+                    ? "Before / Construction"
+                    : "All Views"}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Construction Photo Showcase Card */}
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-center">
-            {/* Real Project Photo */}
+          {/* Main Featured Photo & Interactive Details */}
+          <div className="grid gap-10 lg:grid-cols-[1.3fr_0.7fr] items-stretch">
+            {/* Active Highlight Image */}
             <motion.div
+              key={selectedImage.id}
               initial="hidden"
-              whileInView="visible"
-              viewport={viewportOnce}
+              animate="visible"
               variants={fadeIn}
-              className="group relative overflow-hidden rounded-2xl border border-white/20 bg-[#121c30] shadow-2xl"
+              className="group relative overflow-hidden rounded-2xl border border-white/20 bg-[#121c30] shadow-2xl flex flex-col justify-between"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#182233]">
+              <div className="relative aspect-[16/11] w-full overflow-hidden bg-[#182233]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/ile-eke-project.jpg"
-                  alt="Ilé Ẹ̀kẹ́ Hall Construction Site Progress"
+                  src={selectedImage.src}
+                  alt={selectedImage.title}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#08111f] via-transparent to-transparent opacity-80" />
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#08111f] via-transparent to-transparent opacity-90" />
 
-              {/* Photo Overlay Badge */}
-              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-                <div className="rounded-lg border border-[#d4b56e]/40 bg-[#0d1627]/90 px-4 py-2 backdrop-blur-md">
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#d4b56e]">
-                    Ilé Ẹ̀kẹ́ Hall · Steel Roof Truss Erection
-                  </p>
-                  <p className="mt-0.5 text-[11px] text-white/70">
-                    Highland Seat, Ibadan Central
-                  </p>
+                {/* Top Badge */}
+                <div className="absolute top-5 left-5">
+                  <span
+                    className={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest backdrop-blur-md border ${
+                      selectedImage.type === "Present"
+                        ? "border-[#d4b56e]/50 bg-[#0d1627]/90 text-[#d4b56e]"
+                        : "border-amber-400/40 bg-[#0d1627]/90 text-amber-300"
+                    }`}
+                  >
+                    {selectedImage.type === "Present" ? (
+                      <CheckCircle2 size={13} className="text-[#d4b56e]" />
+                    ) : (
+                      <HardHat size={13} className="text-amber-400" />
+                    )}
+                    {selectedImage.badge}
+                  </span>
                 </div>
               </div>
-            </motion.div>
 
-            {/* Project Quick Meta Stats */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportOnce}
-              variants={staggerContainer}
-              className="space-y-6"
-            >
-              <motion.div variants={fadeUp} className="rounded-xl border border-white/10 bg-[#121c30] p-6">
+              {/* Photo Description Box */}
+              <div className="p-6 md:p-8 bg-[#121c30] border-t border-white/10">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
-                  Current Project Milestone
+                  {selectedImage.subtitle}
                 </span>
-                <h3 className="mt-2 font-display text-2xl text-white">
-                  Structural Domed Roof Framework
+                <h3 className="mt-1 font-display text-2xl md:text-3xl text-white">
+                  {selectedImage.title}
                 </h3>
-                <p className="mt-2 text-sm leading-7 text-white/70">
-                  Fabrication and lifting of the main assembly hall&apos;s steel roof truss arch, supported by heavy reinforced concrete columns designed for long-span durability.
+                <p className="mt-3 text-sm leading-7 text-white/75">
+                  {selectedImage.desc}
                 </p>
-              </motion.div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <motion.div variants={fadeUp} className="rounded-xl border border-white/10 bg-[#121c30] p-5">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4b56e] mb-1">
-                    <MapPin size={13} /> Location
-                  </div>
-                  <p className="font-display text-lg text-white">Ibadan Central</p>
-                  <p className="text-xs text-white/55">Oyo State, Nigeria</p>
-                </motion.div>
-
-                <motion.div variants={fadeUp} className="rounded-xl border border-white/10 bg-[#121c30] p-5">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#d4b56e] mb-1">
-                    <Landmark size={13} /> Capacity
-                  </div>
-                  <p className="font-display text-lg text-white">1,500+ Capacity</p>
-                  <p className="text-xs text-white/55">Assembly Parliament</p>
-                </motion.div>
               </div>
             </motion.div>
+
+            {/* Thumbnail Selectors & Quick Project Facts */}
+            <div className="flex flex-col justify-between gap-6">
+              <div className="space-y-4">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c8a85f]">
+                  Select Image to Inspect:
+                </p>
+
+                {filteredImages.map((img) => (
+                  <button
+                    key={img.id}
+                    type="button"
+                    onClick={() => setSelectedImage(img)}
+                    className={`w-full text-left rounded-xl border p-3.5 transition-all flex items-center gap-4 ${
+                      selectedImage.id === img.id
+                        ? "border-[#d4b56e] bg-[#1a263d] shadow-lg"
+                        : "border-white/10 bg-[#121c30] hover:border-white/25 hover:bg-[#162238]"
+                    }`}
+                  >
+                    <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg bg-[#0d1627]">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={img.src}
+                        alt={img.title}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`rounded px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
+                            img.type === "Present"
+                              ? "bg-[#2a4a1a] text-[#86efac]"
+                              : "bg-white/10 text-[#d4b56e]"
+                          }`}
+                        >
+                          {img.type}
+                        </span>
+                        <span className="text-[11px] text-white/50 truncate">
+                          {img.subtitle}
+                        </span>
+                      </div>
+                      <p className="font-display text-base text-white mt-1 truncate">
+                        {img.title}
+                      </p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Quick Info Card */}
+              <div className="rounded-xl border border-white/10 bg-[#121c30] p-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
+                  Architectural Summary
+                </span>
+                <div className="mt-4 space-y-3 text-xs text-white/70">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                    <span className="flex items-center gap-1.5"><MapPin size={13} className="text-[#d4b56e]" /> Location</span>
+                    <span className="font-medium text-white">Ibadan Central, Oyo State</span>
+                  </div>
+                  <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                    <span className="flex items-center gap-1.5"><Landmark size={13} className="text-[#d4b56e]" /> Capacity</span>
+                    <span className="font-medium text-white">1,500+ Seat Parliament</span>
+                  </div>
+                  <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                    <span className="flex items-center gap-1.5"><CheckCircle2 size={13} className="text-[#d4b56e]" /> Exterior Status</span>
+                    <span className="font-semibold text-[#86efac]">Completed & Portico Installed</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="flex items-center gap-1.5"><Shield size={13} className="text-[#d4b56e]" /> Inscription</span>
+                    <span className="font-medium text-[#d4b56e]">Gbọngan Mògájì Ilé Ẹ̀kẹ́</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -291,15 +407,18 @@ export default function IleEkePage() {
       {/* =========================================================
           SECTION 4: CONSTRUCTION ROADMAP TIMELINE
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-14 bg-[#0d1627] border-b border-white/10">
+      <section id="progress-update" className="py-24 px-6 lg:px-14 bg-[#0d1627] border-b border-white/10">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
-              ÌṢẸ̀ ÀTI ÌTẸ̀SÍWÁJÚ · PROJECT ROADMAP
+              ÌṢẸ̀ ÀTI ÌTẸ̀SÍWÁJÚ · PROJECT ROADMAP & PROGRESS
             </span>
             <h2 className="mt-2 font-display text-3xl md:text-5xl text-white">
               Development Milestones
             </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
+              Tracing the journey from ground substructure and steel framework to the completed exterior present condition and upcoming grand commissioning.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -310,31 +429,33 @@ export default function IleEkePage() {
                 whileInView="visible"
                 viewport={viewportOnce}
                 variants={fadeUp}
-                className="group relative rounded-xl border border-white/15 bg-[#121c30] p-6 shadow-xl"
+                className="group relative rounded-xl border border-white/15 bg-[#121c30] p-6 shadow-xl flex flex-col justify-between"
               >
-                <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
-                  <span className="font-display text-xl font-bold text-[#d4b56e]">
-                    {phase.phase}
-                  </span>
-                  <span
-                    className={`rounded-full px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest ${
-                      phase.status === "Completed"
-                        ? "bg-[#2a4a1a] text-[#86efac] border border-[#86efac]/30"
-                        : phase.status === "In Progress"
-                        ? "bg-[#d4b56e] text-[#0d1627] font-bold"
-                        : "bg-white/10 text-white/60"
-                    }`}
-                  >
-                    {phase.status}
-                  </span>
+                <div>
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+                    <span className="font-display text-xl font-bold text-[#d4b56e]">
+                      {phase.phase}
+                    </span>
+                    <span
+                      className={`rounded-full px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest ${
+                        phase.status === "Completed"
+                          ? "bg-[#2a4a1a] text-[#86efac] border border-[#86efac]/30"
+                          : phase.status === "Final Stage"
+                          ? "bg-[#d4b56e] text-[#0d1627] font-bold"
+                          : "bg-white/10 text-white/60"
+                      }`}
+                    >
+                      {phase.status}
+                    </span>
+                  </div>
+
+                  <h4 className="font-display text-lg text-white group-hover:text-[#d4b56e] transition-colors">
+                    {phase.title}
+                  </h4>
+                  <p className="mt-1 text-xs font-semibold text-[#c8a85f]">{phase.date}</p>
+
+                  <p className="mt-3 text-xs leading-6 text-white/65">{phase.desc}</p>
                 </div>
-
-                <h4 className="font-display text-lg text-white group-hover:text-[#d4b56e] transition-colors">
-                  {phase.title}
-                </h4>
-                <p className="mt-1 text-xs font-semibold text-[#c8a85f]">{phase.date}</p>
-
-                <p className="mt-3 text-xs leading-6 text-white/65">{phase.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -354,7 +475,7 @@ export default function IleEkePage() {
               Be part of Ilé Ẹ̀kẹ́&apos;s legacy.
             </h2>
             <p className="mt-3 text-base text-white/80 max-w-xl leading-8">
-              Family compounds, diaspora Ibadanites, and corporate partners are invited to join the Association of Mogajis in bringing this historical assembly hall to completion.
+              Family compounds, diaspora Ibadanites, and corporate partners are invited to join the Association of Mogajis in bringing this historical assembly hall to full interior commissioning.
             </p>
           </div>
 
