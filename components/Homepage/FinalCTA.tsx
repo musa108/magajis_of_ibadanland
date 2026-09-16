@@ -1,51 +1,59 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export default function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-[var(--terracotta)] px-6 py-28 md:px-10 md:py-36 lg:px-14 lg:py-44">
-      <div className="absolute -right-20 -top-40 font-display text-[30rem] leading-none text-white/[0.04]">
-        I
+    <section className="relative overflow-hidden bg-[#9a5b43] px-6 py-28 text-[#f4f0e7] sm:px-8 md:py-36 lg:px-12 lg:py-44">
+      {/* Background Archival Monogram Watermark */}
+      <div className="pointer-events-none absolute -right-12 -bottom-24 select-none font-display text-[26rem] font-normal leading-none text-white/[0.04]">
+        Ì
       </div>
 
-      <div className="relative mx-auto max-w-[1440px]">
+      <div className="relative mx-auto max-w-[1360px]">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="max-w-5xl"
+          className="max-w-4xl"
         >
-          <p className="mb-7 text-xs font-bold uppercase tracking-[0.22em] text-white/70">
-            ÀLÀÁFÍÀ FÚN ILẸ̀ ÌBÀDÀN · OUR HERITAGE & FUTURE
-          </p>
+          <div className="mb-6 flex items-center gap-3">
+            <span className="h-[1px] w-8 bg-white/40" />
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">
+              ÀLÀÁFÍÀ FÚN ILẸ̀ ÌBÀDÀN · LIVING HERITAGE
+            </p>
+          </div>
 
-          <h2 className="font-display text-[clamp(4rem,8vw,9rem)] leading-[0.78] tracking-[-0.045em] text-white">
+          <h2 className="font-display text-[clamp(2.8rem,6.5vw,6rem)] font-normal leading-[1.02] tracking-[-0.035em] text-[#f4f0e7]">
             Ìtàn Ìbàdàn
             <br />
-            <span className="italic text-white/65">
-              continues.
-            </span>
+            <span className="italic text-white/85">continues.</span>
           </h2>
 
-          <p className="mt-8 max-w-xl text-base leading-8 text-white/75 md:text-lg">
-            Explore the leaders (<span className="italic">Mògájì</span>), ancestral compounds (<span className="italic">Agbo Ilé</span>), and timeless cultural traditions shaping the living legacy of Ibadanland.
+          <p className="mt-8 font-display text-2xl sm:text-3xl italic text-white/95 leading-snug">
+            &ldquo;The story did not end with those who came before us. We are still carrying it.&rdquo;
           </p>
 
-          <a
-            href="/heritage"
-            className="group mt-9 inline-flex items-center gap-4 bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[var(--midnight)] transition hover:bg-[var(--midnight)] hover:text-white"
-          >
-            Explore Ibadan&apos;s heritage · Wò Ìtàn Àti Àṣà
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg sm:leading-8 font-sans">
+            Explore the leaders (<span className="italic">Àwọn Mògájì</span>), ancestral compounds (<span className="italic">Agbo Ilé</span>), and chieftaincy traditions shaping the enduring legacy of Ibadanland.
+          </p>
 
-            <ArrowRight
-              size={15}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </a>
+          <div className="mt-10">
+            <Link
+              href="/heritage"
+              className="group inline-flex items-center gap-4 border border-white/80 bg-[#07111f] px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-[#f4f0e7] transition hover:bg-white hover:text-[#07111f] hover:border-white shadow-xl"
+            >
+              <span>Explore Ibadan&apos;s Heritage · Wò Ìtàn Àti Àṣà</span>
+              <ArrowUpRight
+                size={14}
+                className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

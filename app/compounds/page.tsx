@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { MapPin, Clock, Home, ChevronRight } from "lucide-react";
 import { fadeUp, viewportOnce } from "@/lib/animations";
-
 import HeritageMap from "@/components/HeritageMap";
 
 const compounds = [
@@ -17,9 +16,8 @@ const compounds = [
     quarter: "Ibadan South-West",
     mogaji: "Mogaji Asimiyu Adepoju Ariori",
     description:
-      "One of the most storied ancestral compounds in Ibadanland. Olorisa Compound has been central to the religious, civic and leadership traditions of Ibadan's indigenous families for centuries.",
+      "One of the most storied ancestral compounds in Ibadanland. Olorisa Compound has been central to the religious, civic, and leadership traditions of Ibadan's indigenous families for centuries.",
     heritage: "Founded during the early settlements of Ibadan.",
-    color: "from-[#b99a58]/20 to-[#0d1627]",
   },
   {
     id: "odugade",
@@ -31,7 +29,6 @@ const compounds = [
     description:
       "Home of the distinguished Odugade royal lineage, which produced Oba (Dr) Samuel Osundiran Odulana Odugade I — the 40th Olubadan of Ibadanland. A compound deeply intertwined with Ibadan's monarchical history.",
     heritage: "Ancestral home of the 40th Olubadan of Ibadanland.",
-    color: "from-[#8a4f2f]/20 to-[#0d1627]",
   },
   {
     id: "aleshinloye",
@@ -43,7 +40,6 @@ const compounds = [
     description:
       "The Aleshinloye compound is historically linked to one of the most prominent political dynasties of modern Ibadanland, associated with market leadership and civic influence.",
     heritage: "Legacy of commercial and civic leadership in Ibadan.",
-    color: "from-[#1a3a6b]/20 to-[#0d1627]",
   },
   {
     id: "lafiku",
@@ -55,7 +51,6 @@ const compounds = [
     description:
       "Located in Eleta, the Lafiku compound is a vibrant ancestral family home maintaining its centuries-old traditions of communal governance and family unity.",
     heritage: "Prominent family home in Eleta since the 19th century.",
-    color: "from-[#2a4a1a]/20 to-[#0d1627]",
   },
   {
     id: "ekolo",
@@ -67,7 +62,6 @@ const compounds = [
     description:
       "The Ekolo compound represents a key lineage in Ibadan's cultural fabric, contributing to governance, arts, and traditional leadership through successive generations.",
     heritage: "Traditional compound of cultural and artistic legacy.",
-    color: "from-[#3a1a4a]/20 to-[#0d1627]",
   },
   {
     id: "eshinoye",
@@ -79,7 +73,6 @@ const compounds = [
     description:
       "Situated near Oke-Offa Babasale, the Eshinoye compound stands as a pillar of intellectual and administrative tradition, having produced scholars and civic leaders across generations.",
     heritage: "Academic and administrative heritage compound.",
-    color: "from-[#1a4a3a]/20 to-[#0d1627]",
   },
   {
     id: "alagbede",
@@ -89,9 +82,8 @@ const compounds = [
     quarter: "Ibadan Central",
     mogaji: "Chief Lateef Adesokan",
     description:
-      "The Alagbede Ogunkeye compound is deeply rooted in Ibadan's ironworking and blacksmithing traditions — foundational crafts that powered early Ibadan's military and agricultural economy.",
+      "The Alagbede Ogunkeye compound is deeply rooted in Ibadan's ironworking and blacksmithing traditions — foundational crafts that powered early Ibadan's military defense and agricultural economy.",
     heritage: "Ironworking and artisan lineage from Ibadan's founding era.",
-    color: "from-[#4a1a1a]/20 to-[#0d1627]",
   },
   {
     id: "toki",
@@ -103,7 +95,6 @@ const compounds = [
     description:
       "A renowned ancestral compound in the historic heart of Ibadanland. Agbo Ilé Toki has preserved warrior lineage traditions, communal governance, and cultural leadership for generations.",
     heritage: "Historic family compound of the Toki lineage.",
-    color: "from-[#d4b56e]/20 to-[#0d1627]",
   },
   {
     id: "akinade",
@@ -115,49 +106,42 @@ const compounds = [
     description:
       "Nestled near the iconic Mapo Hill, the Akinade compound has been a beacon of peace-building and youth leadership development in Ibadanland.",
     heritage: "Peace, leadership, and civic harmony compound near Mapo.",
-    color: "from-[#1a3a2a]/20 to-[#0d1627]",
   },
 ];
 
 const historicQuarters = [
   { name: "Mapo", desc: "The political and civic heart of Ibadan, home to Mapo Hall." },
-  { name: "Oja 'Ba", desc: "The King's market district, a vibrant center of traditional trade." },
+  { name: "Oja ’Ba", desc: "The King's market district, a vibrant center of traditional trade." },
   { name: "Bere", desc: "Ancient warrior district known for its military heritage." },
   { name: "Kudeti", desc: "Cultural and educational quarter of old Ibadan." },
   { name: "Oke Are", desc: "Hilltop district with panoramic views and deep royal history." },
-  { name: "Beere / Gbagi", desc: "Commercial crossroads of the city, blending heritage and modernity." },
+  { name: "Gbagi & Central", desc: "Commercial crossroads of the city, blending heritage and trade." },
 ];
 
 export default function CompoundsPage() {
   return (
-    <main className="min-h-screen bg-[#0d1627] text-[#f5f1e8]">
+    <main className="min-h-screen bg-[#07111f] text-[#f4f0e7]">
       <Navbar />
 
       {/* =========================================================
           HERO BANNER
       ========================================================= */}
-      <section className="relative pt-36 pb-24 px-6 lg:px-14 overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08111f] via-[#0d1627] to-[#0d1627]" />
-        <div className="pointer-events-none absolute right-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-[#8a4f2f] opacity-15 blur-[150px]" />
-
-        <div className="relative z-10 mx-auto max-w-[1200px]">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#b99a58]/40 bg-[#0d1627]/80 px-4 py-1.5 backdrop-blur-md mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#d4b56e] animate-pulse" />
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c8a85f]">
+      <section className="relative pt-36 pb-24 px-6 lg:px-12 overflow-hidden border-b border-[#b89a5a]/20">
+        <div className="mx-auto max-w-[1360px]">
+          <div className="mb-6 flex items-center gap-3">
+            <span className="h-[1px] w-8 bg-[#b89a5a]" />
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#d4b56e]">
               ÀWỌN AGBO ILÉ · ANCESTRAL HOMES & FAMILY COMPOUNDS
-            </span>
+            </p>
           </div>
 
           <div className="max-w-[950px]">
-            <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#c8a85f] mb-3">
-              THE PLACES
-            </p>
-            <h1 className="font-display text-[clamp(3.2rem,7.5vw,7.5rem)] font-normal leading-[0.95] tracking-[-0.04em] text-white">
+            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.02] tracking-[-0.035em] text-[#f4f0e7]">
               The <span className="italic text-[#d4b56e]">Compounds.</span>
             </h1>
           </div>
 
-          <p className="mt-8 max-w-2xl text-base leading-9 text-white/80 md:text-xl border-l-2 border-[#d4b56e] pl-6">
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-[#f4f0e7]/85 sm:text-lg sm:leading-8 border-l-2 border-[#b89a5a] pl-6 font-sans">
             Across Ibadanland, over 2,500 family compounds (<span className="italic text-[#d4b56e]">Agbo Ilé</span>) carry generations of memory, identity, chieftaincy lineage, and cultural tradition.
           </p>
         </div>
@@ -166,20 +150,20 @@ export default function CompoundsPage() {
       {/* =========================================================
           INTERACTIVE GEOSPATIAL HERITAGE MAP
       ========================================================= */}
-      <section className="py-20 px-6 lg:px-14 mx-auto max-w-[1200px]">
+      <section className="py-20 px-6 lg:px-12 mx-auto max-w-[1360px]">
         <HeritageMap />
       </section>
 
       {/* =========================================================
           HISTORIC QUARTERS
       ========================================================= */}
-      <section className="py-20 px-6 lg:px-14 bg-[#08111f] border-b border-white/10">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mb-12">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
+      <section className="py-20 px-6 lg:px-12 bg-[#050c17] border-t border-b border-white/10">
+        <div className="mx-auto max-w-[1360px]">
+          <div className="mb-12 border-b border-white/10 pb-6">
+            <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#b89a5a]">
               ÀWỌN ÀGBÈGBÈ ÀTIJỌ́ · HISTORIC QUARTERS OF IBADANLAND
-            </p>
-            <h2 className="mt-2 font-display text-3xl md:text-4xl text-white">
+            </span>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl text-[#f4f0e7]">
               The Ancient Districts
             </h2>
           </div>
@@ -193,15 +177,15 @@ export default function CompoundsPage() {
                 viewport={viewportOnce}
                 variants={fadeUp}
                 transition={{ delay: i * 0.08 }}
-                className="group rounded-lg border border-white/10 bg-[#121c30] p-5 transition-all hover:border-[#d4b56e]/50"
+                className="group border border-white/10 bg-[#0b1627] p-5 transition-all hover:border-[#b89a5a]"
               >
                 <div className="flex items-start gap-3">
-                  <MapPin size={16} className="mt-0.5 text-[#d4b56e] shrink-0" />
+                  <MapPin size={15} className="mt-0.5 text-[#b89a5a] shrink-0" />
                   <div>
-                    <h4 className="font-display text-lg text-white group-hover:text-[#d4b56e] transition-colors">
+                    <h3 className="font-display text-lg text-white group-hover:text-[#d4b56e] transition-colors">
                       {quarter.name}
-                    </h4>
-                    <p className="mt-1 text-sm text-white/65">{quarter.desc}</p>
+                    </h3>
+                    <p className="mt-1 text-xs text-[#aaa397] leading-relaxed font-sans">{quarter.desc}</p>
                   </div>
                 </div>
               </motion.div>
@@ -213,12 +197,12 @@ export default function CompoundsPage() {
       {/* =========================================================
           COMPOUNDS DIRECTORY
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-14 mx-auto max-w-[1200px]">
-        <div className="mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
+      <section className="py-24 px-6 lg:px-12 mx-auto max-w-[1360px]">
+        <div className="mb-14 border-b border-white/10 pb-6">
+          <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#b89a5a]">
             DIRECTORY · ÀWỌN AGBO ILÉ
-          </p>
-          <h2 className="mt-2 font-display text-3xl md:text-5xl text-white">
+          </span>
+          <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl text-[#f4f0e7]">
             Notable Family Compounds
           </h2>
         </div>
@@ -231,43 +215,43 @@ export default function CompoundsPage() {
               whileInView="visible"
               viewport={viewportOnce}
               variants={fadeUp}
-              transition={{ delay: (i % 2) * 0.12 }}
-              className="group relative overflow-hidden rounded-xl border border-white/15 bg-[#121c30] p-7 shadow-xl transition-all hover:border-[#d4b56e]/50"
+              transition={{ delay: (i % 2) * 0.1 }}
+              className="group border border-[#b89a5a]/25 bg-[#0b1627] p-7 transition-all hover:border-[#b89a5a] flex flex-col justify-between"
             >
-              <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${compound.color} opacity-50`} />
-
-              <div className="relative z-10">
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
+              <div>
+                <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#b89a5a] block">
                   {compound.yoruba}
                 </span>
-                <h3 className="mt-1 font-display text-2xl text-white group-hover:text-[#d4b56e] transition-colors">
+                <h3 className="mt-1 font-display text-2xl sm:text-3xl text-white group-hover:text-[#d4b56e] transition-colors">
                   {compound.name}
                 </h3>
 
-                <div className="mt-3 flex flex-wrap gap-3 text-[10px] text-white/60">
+                <div className="mt-3 flex flex-wrap gap-3 text-xs text-[#aaa397] font-sans">
                   <span className="flex items-center gap-1">
-                    <MapPin size={11} />
+                    <MapPin size={11} className="text-[#b89a5a]" />
                     {compound.location}
                   </span>
                   <span className="flex items-center gap-1">
-                    <Home size={11} />
+                    <Home size={11} className="text-[#b89a5a]" />
                     {compound.quarter}
                   </span>
                 </div>
 
-                <p className="mt-4 text-sm leading-7 text-white/75">
+                <p className="mt-4 text-sm leading-relaxed text-[#f4f0e7]/80 font-sans">
                   {compound.description}
                 </p>
+              </div>
 
-                <div className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4 text-sm text-white/60">
-                  <Clock size={12} className="text-[#d4b56e]" />
+              <div className="mt-6 border-t border-white/10 pt-4">
+                <div className="flex items-center gap-2 text-xs text-[#aaa397]">
+                  <Clock size={12} className="text-[#b89a5a]" />
                   <span>{compound.heritage}</span>
                 </div>
 
-                <div className="mt-3 flex items-center gap-2 text-xs">
+                <div className="mt-2 flex items-center gap-2 text-xs">
                   <ChevronRight size={12} className="text-[#d4b56e]" />
-                  <span className="text-[#c8a85f]">Mogaji: </span>
-                  <span className="text-white/75">{compound.mogaji}</span>
+                  <span className="text-[#b89a5a]">Mogaji: </span>
+                  <span className="text-[#f4f0e7] font-medium">{compound.mogaji}</span>
                 </div>
               </div>
             </motion.div>

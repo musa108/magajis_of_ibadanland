@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --midnight: #101827;
-  --ivory: #f4f0e6;
+  /* Core Cultural Palette */
+  --midnight: #07111f;
+  --ink: #101923;
+  --cream: #e8e0d0;
+  --ivory: #f4f0e7;
   --gold: #b89a5a;
+  --gold-light: #d4b56e;
+  --gold-dark: #8e733c;
   --terracotta: #9a5b43;
-  --charcoal: #242424;
-  --muted: #6f6b63;
+  --stone: #aaa397;
+  --charcoal: #1e242d;
+  --muted: #67635b;
   --white: #ffffff;
 }
 
@@ -16,24 +22,71 @@
 
 html {
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
-  background: var(--ivory);
-  color: var(--charcoal);
-  font-family: var(--font-manrope), sans-serif;
+  background-color: var(--midnight);
+  color: var(--ivory);
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
 }
 
+/* Typography Helpers */
 .font-display {
-  font-family: var(--font-cormorant), serif;
+  font-family: var(--font-cormorant), Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+.font-serif {
+  font-family: var(--font-cormorant), Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-sans {
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Editorial Linework & Details */
+.archival-hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184, 154, 90, 0.45), transparent);
+}
+
+.archival-rule {
+  border-color: rgba(184, 154, 90, 0.28);
+}
+
+.archival-rule-cream {
+  border-color: rgba(16, 25, 35, 0.15);
+}
+
+/* Subtle Film Grain Texture */
+.bg-film-grain {
+  background-image: radial-gradient(rgba(184, 154, 90, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Selection Color */
 ::selection {
-  background: var(--gold);
+  background-color: var(--gold);
   color: var(--midnight);
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

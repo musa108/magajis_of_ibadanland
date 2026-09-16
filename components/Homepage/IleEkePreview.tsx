@@ -1,37 +1,36 @@
 "use client";
 
-import { ArrowUpRight, Landmark, Shield, Users, CheckCircle2 } from "lucide-react";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { fadeUp, fadeIn, staggerContainer, viewportOnce } from "@/lib/animations";
+import { motion } from "framer-motion";
+import { ArrowUpRight, CheckCircle2, Landmark, Shield, Users } from "lucide-react";
+import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export default function IleEkePreview() {
   return (
     <section
       id="ile-eke"
-      className="relative overflow-hidden bg-[#0d1627] px-6 py-28 text-white md:px-10 md:py-36 lg:px-14 lg:py-44 border-y border-white/10"
+      className="relative overflow-hidden bg-[#07111f] px-6 py-28 text-[#f4f0e7] sm:px-8 md:py-36 lg:px-12 lg:py-44 border-y border-[#b89a5a]/20"
     >
-      {/* Background Ambience Glow */}
-      <div className="pointer-events-none absolute left-[10%] top-[20%] h-[500px] w-[500px] rounded-full bg-[#b89a5a] opacity-10 blur-[150px]" />
-      <div className="pointer-events-none absolute right-[5%] bottom-[15%] h-[400px] w-[400px] rounded-full bg-[#9a5b43] opacity-10 blur-[140px]" />
-
-      <div className="mx-auto max-w-[1440px]">
-        {/* Section Header */}
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end mb-16 md:mb-24">
+      <div className="mx-auto max-w-[1360px]">
+        {/* =====================================================
+            HEADER
+        ===================================================== */}
+        <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end border-b border-white/10 pb-12">
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#d4b56e]/40 bg-[#121c30] px-4 py-1.5 backdrop-blur-md mb-6">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#d4b56e] animate-pulse" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
-                ÌKỌ́LÉ ÀṢÀ · HISTORIC ASSEMBLY HALL
-              </span>
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-[1px] w-8 bg-[#b89a5a]" />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#d4b56e]">
+                ÌKỌ́LÉ ÀṢÀ · HISTORIC ASSEMBLY COMPLEX
+              </p>
             </div>
 
-            <h2 className="font-display text-[clamp(3.5rem,7vw,7rem)] leading-[0.85] tracking-[-0.045em] text-white">
+            <h2 className="font-display text-[clamp(2.6rem,5.5vw,5rem)] font-normal leading-[1.02] tracking-[-0.035em] text-[#f4f0e7]">
               Gbọ̀ngàn Mògájì
               <br />
               <span className="italic text-[#d4b56e]">Ilé Ẹ̀kẹ́.</span>
@@ -43,163 +42,170 @@ export default function IleEkePreview() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="flex flex-col justify-between gap-6"
+            className="max-w-lg"
           >
-            <p className="text-base leading-8 text-white/75 md:text-lg">
+            <p className="text-base leading-relaxed text-[#f4f0e7]/80 sm:text-lg sm:leading-8 font-sans">
               The grand parliamentary hall and civic council secretariat of the{" "}
-              <span className="text-white font-medium">Association of Mogajis of Ibadanland</span>. A monumental traditional complex built to house council conventions, royal arbitrations, and archival preservation.
+              <span className="text-white font-medium">Association of Mogajis of Ibadanland</span>. A monumental traditional complex built to house council conventions, royal arbitrations, and lineage archival preservation.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-5">
               <Link
                 href="/ile-eke"
-                className="group inline-flex items-center gap-3 bg-[#d4b56e] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#0d1627] transition hover:bg-[#c8a85f] shadow-xl"
+                className="group inline-flex items-center gap-3 border border-[#b89a5a] bg-[#b89a5a] px-6 py-3.5 text-xs font-bold uppercase tracking-[0.2em] text-[#07111f] transition hover:bg-[#d4b56e]"
               >
                 <span>Explore Ilé Ẹ̀kẹ́ Project</span>
-                <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight
+                  size={14}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
               </Link>
 
               <Link
                 href="/ile-eke#progress-update"
-                className="inline-flex items-center gap-2 border border-white/20 px-6 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-white/80 transition hover:border-white hover:text-white"
+                className="inline-flex items-center gap-2 border border-white/20 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#aaa397] transition hover:border-[#b89a5a] hover:text-[#f4f0e7]"
               >
-                <span>Before & Present Status</span>
+                <span>Construction Journey</span>
               </Link>
             </div>
           </motion.div>
         </div>
 
-        {/* Visual Showcase: Present Condition & Highlights */}
-        <div className="grid gap-8 lg:grid-cols-12 items-stretch">
-          {/* Main Visual: Front Elevation Present Condition */}
+        {/* =====================================================
+            ARCHITECTURAL DOCUMENTARY SHOWCASE
+        ===================================================== */}
+        <div className="mt-14 grid gap-8 lg:grid-cols-12 items-start">
+          {/* Main Visual: Ceremonial Facade & Portico (7 Cols) */}
           <motion.div
-            variants={fadeIn}
+            variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="group relative overflow-hidden rounded-2xl border border-white/15 bg-[#121c30] shadow-2xl lg:col-span-7 flex flex-col"
+            className="group relative overflow-hidden border border-[#b89a5a]/30 bg-[#0b1627] lg:col-span-7 flex flex-col justify-between"
           >
-            <div className="relative aspect-[16/11] w-full overflow-hidden bg-[#182233]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className="relative aspect-[16/11] w-full overflow-hidden bg-[#07111f]">
+              <Image
                 src="/images/ile-eke-present-2.jpg"
-                alt="Gbọngan Mogaji Ilé Ẹ̀kẹ́ - Present Condition Front Facade"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                alt="Gbọngan Mogaji Ilé Ẹ̀kẹ́ - Present Condition Front Entrance"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08111f] via-transparent to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b1627] via-transparent to-transparent opacity-80" />
 
               {/* Status Badge */}
-              <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full border border-[#d4b56e]/50 bg-[#0d1627]/90 px-3.5 py-1.5 backdrop-blur-md">
+              <div className="absolute top-4 left-4 z-10 flex items-center gap-2 border border-[#b89a5a]/60 bg-[#07111f]/90 px-3.5 py-1.5 backdrop-blur-md">
                 <CheckCircle2 size={13} className="text-[#d4b56e]" />
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#d4b56e]">
+                <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.2em] text-[#d4b56e]">
                   Present Condition · Exterior Completed
                 </span>
               </div>
             </div>
 
-            <div className="p-6 md:p-8 flex-1 flex flex-col justify-between bg-[#121c30]">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
-                  Main Entrance & Assembly Facade
-                </p>
-                <h3 className="mt-1 font-display text-2xl md:text-3xl text-white">
-                  Gbọ̀ngàn Mògájì · Grand Ceremonial Portico
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">
-                  Featuring the historic embossed inscription, gold-crested royal columns, stainless steel processional stairs, and double-height assembly hall doors.
-                </p>
-              </div>
+            <div className="p-7 sm:p-9 border-t border-white/10">
+              <span className="text-[11px] font-sans font-semibold uppercase tracking-[0.2em] text-[#b89a5a] block">
+                Main Ceremonial Portico
+              </span>
+              <h3 className="mt-1 font-display text-2xl sm:text-3xl text-[#f4f0e7]">
+                Gbọ̀ngàn Mògájì · Grand Ceremonial Portico
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-[#f4f0e7]/75">
+                Featuring the historic embossed inscription &ldquo;Gbọngan Mogaji Ilé Ẹ̀kẹ́&rdquo;, crossed royal staffs, classical columns with gold capitols, and processional staircases leading into the double-height assembly hall.
+              </p>
 
-              <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs text-white/60">
-                <span>Location: Ibadan Central</span>
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4 text-xs text-[#aaa397]">
+                <span>Ibadan Central, Oyo State</span>
                 <span className="font-semibold text-[#d4b56e]">1,500+ Seat Assembly Capacity</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Side Cards: Secondary Present View & Key Features */}
-          <div className="flex flex-col gap-8 lg:col-span-5">
-            {/* Secondary Photo: Side View & Colonnade */}
+          {/* Secondary Photo & Civic Pillars (5 Cols) */}
+          <div className="lg:col-span-5 flex flex-col gap-6">
+            {/* Lateral Colonnade Image */}
             <motion.div
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={viewportOnce}
-              className="group relative overflow-hidden rounded-2xl border border-white/15 bg-[#121c30] shadow-xl"
+              className="group relative overflow-hidden border border-white/15 bg-[#0b1627]"
             >
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#182233]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#07111f]">
+                <Image
                   src="/images/ile-eke-present-1.jpg"
-                  alt="Ilé Ẹ̀kẹ́ Side Colonnade and Landscaped Grounds"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt="Ilé Ẹ̀kẹ́ Colonnade and Grounds"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#08111f] via-transparent to-transparent opacity-80" />
-
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                  <span className="rounded-md border border-white/20 bg-[#0d1627]/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white/90 backdrop-blur-md">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b1627]/80 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="border border-white/20 bg-[#07111f]/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#f4f0e7] backdrop-blur-md">
                     Campus Grounds & Side Colonnade
                   </span>
                 </div>
               </div>
             </motion.div>
 
-            {/* Quick Pillars Grid */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportOnce}
-              className="grid gap-3 sm:grid-cols-3 flex-1"
-            >
+            {/* Three Institutional Pillars */}
+            <div className="grid gap-3 sm:grid-cols-3">
               <motion.div
                 variants={fadeUp}
-                className="rounded-xl border border-white/10 bg-[#121c30] p-4 flex flex-col justify-between"
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
+                className="border border-white/10 bg-[#0b1627] p-4 flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between text-[#d4b56e] mb-2">
-                  <Landmark size={20} />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">01</span>
+                  <Landmark size={18} />
+                  <span className="text-[10px] font-bold text-[#aaa397]">01</span>
                 </div>
                 <div>
                   <h4 className="font-display text-base text-white">Parliament</h4>
-                  <p className="mt-1 text-[11px] leading-snug text-white/60">
-                    1,500-seat hall for council conventions.
+                  <p className="mt-1 text-[11px] leading-snug text-[#aaa397]">
+                    1,500-seat council convention hall.
                   </p>
                 </div>
               </motion.div>
 
               <motion.div
                 variants={fadeUp}
-                className="rounded-xl border border-white/10 bg-[#121c30] p-4 flex flex-col justify-between"
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
+                className="border border-white/10 bg-[#0b1627] p-4 flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between text-[#d4b56e] mb-2">
-                  <Shield size={20} />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">02</span>
+                  <Shield size={18} />
+                  <span className="text-[10px] font-bold text-[#aaa397]">02</span>
                 </div>
                 <div>
                   <h4 className="font-display text-base text-white">Arbitration</h4>
-                  <p className="mt-1 text-[11px] leading-snug text-white/60">
-                    Traditional dispute resolution suite.
+                  <p className="mt-1 text-[11px] leading-snug text-[#aaa397]">
+                    Chieftaincy dispute resolution suite.
                   </p>
                 </div>
               </motion.div>
 
               <motion.div
                 variants={fadeUp}
-                className="rounded-xl border border-white/10 bg-[#121c30] p-4 flex flex-col justify-between"
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
+                className="border border-white/10 bg-[#0b1627] p-4 flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between text-[#d4b56e] mb-2">
-                  <Users size={20} />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">03</span>
+                  <Users size={18} />
+                  <span className="text-[10px] font-bold text-[#aaa397]">03</span>
                 </div>
                 <div>
                   <h4 className="font-display text-base text-white">Secretariat</h4>
-                  <p className="mt-1 text-[11px] leading-snug text-white/60">
-                    Executive administration offices.
+                  <p className="mt-1 text-[11px] leading-snug text-[#aaa397]">
+                    Executive leadership administration.
                   </p>
                 </div>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

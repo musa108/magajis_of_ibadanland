@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Shield,
   Users,
@@ -14,7 +15,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import Link from "next/link";
-import { fadeUp, fadeIn, staggerContainer, viewportOnce } from "@/lib/animations";
+import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 const mandates = [
   "Promote and preserve the cultural heritage, traditions, and customs of Ibadanland.",
@@ -103,65 +104,59 @@ const communityProjects = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#0d1627] text-[#f5f1e8]">
+    <main className="min-h-screen bg-[#07111f] text-[#f4f0e7]">
       <Navbar />
 
       {/* =========================================================
           HERO BANNER
       ========================================================= */}
-      <section className="relative pt-36 pb-24 px-6 lg:px-14 overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08111f] via-[#0d1627] to-[#0d1627]" />
-        <div className="pointer-events-none absolute left-[10%] top-[25%] h-[500px] w-[500px] rounded-full bg-[#b99a58] opacity-15 blur-[160px]" />
-        <div className="pointer-events-none absolute right-[5%] bottom-[0%] h-[350px] w-[350px] rounded-full bg-[#8a4f2f] opacity-10 blur-[130px]" />
-
-        <div className="relative z-10 mx-auto max-w-[1200px]">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#b99a58]/40 bg-[#0d1627]/80 px-4 py-1.5 backdrop-blur-md mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#d4b56e] animate-pulse" />
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c8a85f]">
+      <section className="relative pt-36 pb-24 px-6 lg:px-12 overflow-hidden border-b border-[#b89a5a]/20">
+        <div className="mx-auto max-w-[1360px]">
+          <div className="mb-6 flex items-center gap-3">
+            <span className="h-[1px] w-8 bg-[#b89a5a]" />
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#d4b56e]">
               NÍPA ẸGBẸ́ ÀWỌN MÒGÁJÌ · ABOUT THE INSTITUTION
-            </span>
+            </p>
           </div>
 
           <div className="max-w-[950px]">
-            <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#c8a85f] mb-3">
-              OUR HERITAGE
-            </p>
-            <h1 className="font-display text-[clamp(3.2rem,7.5vw,7.5rem)] font-normal leading-[0.95] tracking-[-0.04em] text-white">
+            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.02] tracking-[-0.035em] text-[#f4f0e7]">
               Our story. <span className="italic text-[#d4b56e]">Our future.</span>
             </h1>
           </div>
 
-          <p className="mt-8 max-w-2xl text-base leading-9 text-white/80 md:text-xl border-l-2 border-[#d4b56e] pl-6">
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-[#f4f0e7]/85 sm:text-lg sm:leading-8 border-l-2 border-[#b89a5a] pl-6 font-sans">
             The stories of Ibadan belong to its people. This platform exists to document, preserve, and share them for all generations.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/magajis"
-              className="inline-flex items-center gap-3 bg-[#d4b56e] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#0d1627] transition hover:bg-[#b99a58]"
+              className="group inline-flex items-center gap-3 border border-[#b89a5a] bg-[#b89a5a] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.18em] text-[#07111f] transition hover:bg-[#d4b56e]"
             >
-              Explore the Magajis <ChevronRight size={12} />
+              <span>Explore the Magajis</span>
+              <ChevronRight size={13} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               href="/heritage"
-              className="inline-flex items-center gap-3 border border-white/30 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-white/80 transition hover:border-white hover:text-white"
+              className="inline-flex items-center gap-3 border border-white/30 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-white/80 transition hover:border-[#b89a5a] hover:text-[#d4b56e]"
             >
-              Discover the Heritage
+              <span>Discover the Heritage</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          THE THREE PURPOSE PILLARS
+          THE THREE PURPOSE PILLARS (CREAM FOLIO)
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-14 bg-[#f4f0e6] text-[#101827]">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mb-14">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#8a4f2f]">
+      <section className="py-24 px-6 lg:px-12 bg-[#e8e0d0] text-[#101923]">
+        <div className="mx-auto max-w-[1360px]">
+          <div className="mb-14 border-b border-[#101923]/15 pb-8">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a5b43]">
               ÀWỌN ÒPÓ ẸGBẸ́ · PURPOSE & VISION
             </span>
-            <h2 className="mt-2 font-display text-4xl md:text-5xl text-[#101827]">
+            <h2 className="mt-2 font-display text-4xl sm:text-5xl text-[#101923]">
               Why this platform exists.
             </h2>
           </div>
@@ -173,17 +168,19 @@ export default function AboutPage() {
               whileInView="visible"
               viewport={viewportOnce}
               variants={fadeUp}
-              className="rounded-xl border border-[#101827]/15 bg-white p-8 shadow-lg hover:shadow-2xl transition-all"
+              className="border border-[#101923]/15 bg-[#f4f0e7] p-8 flex flex-col justify-between"
             >
-              <span className="text-xs font-bold uppercase tracking-widest text-[#8a4f2f]">
-                01 · PRESERVE
-              </span>
-              <h3 className="mt-3 font-display text-3xl text-[#101827]">
-                Document the heritage of Ibadanland.
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-[#101827]/75">
-                Digitising ancient chieftaincy installation records, family compound genealogies, and oral traditions before they fade from living memory.
-              </p>
+              <div>
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-[#9a5b43]">
+                  01 · PRESERVE
+                </span>
+                <h3 className="mt-3 font-display text-2xl sm:text-3xl text-[#101923]">
+                  Document the heritage of Ibadanland.
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#1e242d]/80 font-sans">
+                  Digitising ancient chieftaincy installation records, family compound genealogies, and oral traditions before they fade from living memory.
+                </p>
+              </div>
             </motion.div>
 
             {/* CONNECT */}
@@ -193,17 +190,19 @@ export default function AboutPage() {
               viewport={viewportOnce}
               variants={fadeUp}
               transition={{ delay: 0.1 }}
-              className="rounded-xl border border-[#101827]/15 bg-white p-8 shadow-lg hover:shadow-2xl transition-all"
+              className="border border-[#101923]/15 bg-[#f4f0e7] p-8 flex flex-col justify-between"
             >
-              <span className="text-xs font-bold uppercase tracking-widest text-[#8a4f2f]">
-                02 · CONNECT
-              </span>
-              <h3 className="mt-3 font-display text-3xl text-[#101827]">
-                Create a digital bridge between generations.
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-[#101827]/75">
-                Connecting Ibadan descendants worldwide with their ancestral Agbo Ilé compounds, family leaders, and historic lineage roots.
-              </p>
+              <div>
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-[#9a5b43]">
+                  02 · CONNECT
+                </span>
+                <h3 className="mt-3 font-display text-2xl sm:text-3xl text-[#101923]">
+                  Bridge the generations.
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#1e242d]/80 font-sans">
+                  Connecting Ibadan descendants worldwide with their ancestral Agbo Ilé compounds, family leaders, and historic lineage roots.
+                </p>
+              </div>
             </motion.div>
 
             {/* INSPIRE */}
@@ -213,17 +212,19 @@ export default function AboutPage() {
               viewport={viewportOnce}
               variants={fadeUp}
               transition={{ delay: 0.2 }}
-              className="rounded-xl border border-[#101827]/15 bg-white p-8 shadow-lg hover:shadow-2xl transition-all"
+              className="border border-[#101923]/15 bg-[#f4f0e7] p-8 flex flex-col justify-between"
             >
-              <span className="text-xs font-bold uppercase tracking-widest text-[#8a4f2f]">
-                03 · INSPIRE
-              </span>
-              <h3 className="mt-3 font-display text-3xl text-[#101827]">
-                Give future generations a place of discovery.
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-[#101827]/75">
-                Empowering young Ibadanites to discover where they come from, fostering pride in Yoruba traditional governance and civic leadership.
-              </p>
+              <div>
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-[#9a5b43]">
+                  03 · INSPIRE
+                </span>
+                <h3 className="mt-3 font-display text-2xl sm:text-3xl text-[#101923]">
+                  A permanent home of discovery.
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#1e242d]/80 font-sans">
+                  Inspiring young Ibadanites to discover where they come from, fostering pride in Yoruba traditional governance and civic leadership.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -232,33 +233,33 @@ export default function AboutPage() {
       {/* =========================================================
           MANDATE & OBJECTIVES
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-14 bg-[#08111f] border-b border-white/10">
-        <div className="mx-auto max-w-[1200px] grid gap-16 lg:grid-cols-2 items-start">
+      <section className="py-24 px-6 lg:px-12 bg-[#050c17] border-b border-white/10">
+        <div className="mx-auto max-w-[1360px] grid gap-16 lg:grid-cols-2 items-start">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
+            <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#b89a5a]">
               ÀFỌ́JÚ ÌMỌ̀ · MANDATE & OBJECTIVES
-            </p>
-            <h2 className="mt-2 font-display text-3xl md:text-4xl text-white">
+            </span>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl text-[#f4f0e7]">
               Our Purpose and Mission
             </h2>
-            <p className="mt-5 text-base leading-8 text-white/70">
+            <p className="mt-5 text-base leading-relaxed text-[#f4f0e7]/75 font-sans">
               Established as the official umbrella body for all certified Mogajis of Ibadanland, the
               Association operates under a clear mandate rooted in cultural preservation, communal
               harmony, and institutional governance.
             </p>
-            <p className="mt-3 text-base leading-8 text-white/70">
+            <p className="mt-3 text-base leading-relaxed text-[#f4f0e7]/75 font-sans">
               The Association interfaces with government bodies, civil society, and international
               observers on matters affecting the dignity and welfare of Ibadan&apos;s traditional
               institutions and the people they serve.
             </p>
 
-            <div className="mt-8 flex items-center gap-4 rounded-lg border border-[#d4b56e]/30 bg-[#121c30] p-5">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#d4b56e]/40 bg-[#0d1627]">
+            <div className="mt-8 flex items-center gap-4 border border-[#b89a5a]/30 bg-[#0b1627] p-5">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#b89a5a]/40 bg-[#07111f]">
                 <Shield size={22} className="text-[#d4b56e]" />
               </div>
               <div>
-                <p className="text-sm font-bold text-white">Certified & Recognised</p>
-                <p className="mt-1 text-xs text-white/60">
+                <p className="text-sm font-semibold text-white">Certified & Recognised</p>
+                <p className="mt-1 text-xs text-[#aaa397]">
                   All member Mogajis hold official installation certificates recognised by the Oyo
                   State government and the Olubadan Palace Council.
                 </p>
@@ -277,10 +278,10 @@ export default function AboutPage() {
               <motion.li
                 key={i}
                 variants={fadeUp}
-                className="flex items-start gap-3 rounded-lg border border-white/10 bg-[#121c30] p-4"
+                className="flex items-start gap-3 border border-white/10 bg-[#0b1627] p-4"
               >
                 <CheckCircle size={16} className="mt-0.5 shrink-0 text-[#d4b56e]" />
-                <p className="text-base leading-7 text-white/80">{mandate}</p>
+                <p className="text-sm sm:text-base leading-relaxed text-[#f4f0e7]/80 font-sans">{mandate}</p>
               </motion.li>
             ))}
           </motion.ul>
@@ -290,15 +291,15 @@ export default function AboutPage() {
       {/* =========================================================
           EXECUTIVE COUNCIL
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-14 mx-auto max-w-[1200px]">
-        <div className="mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
+      <section className="py-24 px-6 lg:px-12 mx-auto max-w-[1360px]">
+        <div className="mb-14 border-b border-white/10 pb-6">
+          <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#b89a5a]">
             ÌGBÌMỌ̀ ÀṢÁÁJÚ · EXECUTIVE COUNCIL
-          </p>
-          <h2 className="mt-2 font-display text-3xl md:text-5xl text-white">
+          </span>
+          <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl text-[#f4f0e7]">
             Leadership of the Association
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-white/70">
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#aaa397] font-sans">
             The executive council stewards the traditional governance of Ibadanland&apos;s family compounds.
           </p>
         </div>
@@ -312,59 +313,48 @@ export default function AboutPage() {
               viewport={viewportOnce}
               variants={fadeUp}
               transition={{ delay: i * 0.15 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/15 bg-[#121c30] shadow-2xl flex flex-col justify-between"
+              className="border border-[#b89a5a]/25 bg-[#0b1627] flex flex-col justify-between"
             >
               <div>
                 {/* Portrait */}
-                <div className="relative h-[320px] w-full overflow-hidden bg-[#182233] flex items-center justify-center">
-                  {exec.image ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      src={exec.image}
-                      alt={exec.name}
-                      className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="flex flex-col items-center justify-center p-6 text-center">
-                      <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#d4b56e]/40 bg-[#0d1627]">
-                        <span className="font-display text-2xl tracking-widest text-[#d4b56e]">
-                          {exec.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-                        </span>
-                      </div>
-                      <span className="mt-3 text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
-                        Certified Mogaji
-                      </span>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#121c30] via-[#121c30]/30 to-transparent" />
+                <div className="relative aspect-[4/5] w-full overflow-hidden border-b border-[#b89a5a]/20 bg-[#07111f]">
+                  <Image
+                    src={exec.image}
+                    alt={exec.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b1627] via-transparent to-transparent opacity-70" />
 
                   {/* Role Badge */}
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="rounded-full border border-[#d4b56e]/60 bg-[#0d1627]/90 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-[#d4b56e] backdrop-blur-sm">
+                    <span className="border border-[#b89a5a]/60 bg-[#07111f]/90 px-3 py-1 text-[10px] font-sans font-semibold uppercase tracking-widest text-[#d4b56e] backdrop-blur-sm">
                       {exec.yorubaRole}
                     </span>
                   </div>
                 </div>
 
                 <div className="p-7">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
+                  <span className="text-[10px] font-sans font-semibold uppercase tracking-widest text-[#b89a5a] block">
                     {exec.role} · {exec.term}
                   </span>
                   <h3 className="mt-1.5 font-display text-2xl text-white">{exec.name}</h3>
-                  <p className="mt-1 flex items-center gap-1.5 text-xs text-white/50">
-                    <MapPin size={11} className="text-[#d4b56e]" />
+                  <p className="mt-1 flex items-center gap-1.5 text-xs text-[#aaa397]">
+                    <MapPin size={11} className="text-[#b89a5a]" />
                     {exec.compound}
                   </p>
-                  <p className="mt-5 text-base leading-8 text-white/75">{exec.bio}</p>
+                  <p className="mt-5 text-sm leading-relaxed text-[#f4f0e7]/80 font-sans">{exec.bio}</p>
                 </div>
               </div>
 
-              <div className="p-7 pt-0">
+              <div className="p-7 pt-0 border-t border-white/10">
                 <Link
                   href="/magajis"
-                  className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#d4b56e] hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#d4b56e] hover:text-white transition-colors"
                 >
-                  Full Profile <ChevronRight size={11} />
+                  <span>Full Profile</span>
+                  <ChevronRight size={12} />
                 </Link>
               </div>
             </motion.div>
@@ -373,15 +363,15 @@ export default function AboutPage() {
       </section>
 
       {/* =========================================================
-          COMMUNITY PROJECTS
+          COMMUNITY INITIATIVES
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-14 bg-[#08111f] border-y border-white/10">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mb-14">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
-              ÀWỌN IṢẸ́ ÀWÙ JỌ · COMMUNITY INITIATIVES
-            </p>
-            <h2 className="mt-2 font-display text-3xl md:text-5xl text-white">
+      <section className="py-24 px-6 lg:px-12 bg-[#050c17] border-y border-white/10">
+        <div className="mx-auto max-w-[1360px]">
+          <div className="mb-14 border-b border-white/10 pb-6">
+            <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#b89a5a]">
+              ÀWỌN IṢẸ́ ÀWÙJỌ · COMMUNITY INITIATIVES
+            </span>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl text-[#f4f0e7]">
               Building for Ibadanland
             </h2>
           </div>
@@ -397,20 +387,20 @@ export default function AboutPage() {
               <motion.div
                 key={project.title}
                 variants={fadeUp}
-                className="group rounded-xl border border-white/10 bg-[#121c30] p-7 transition-all hover:border-[#d4b56e]/40"
+                className="border border-white/10 bg-[#0b1627] p-7 transition-all hover:border-[#b89a5a]"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
+                  <span className="text-[10px] font-sans font-semibold uppercase tracking-widest text-[#b89a5a]">
                     {project.yoruba}
                   </span>
-                  <span className="rounded-full border border-[#d4b56e]/40 px-3 py-0.5 text-xs font-semibold uppercase tracking-widest text-[#d4b56e]">
+                  <span className="border border-[#b89a5a]/40 px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-[#d4b56e]">
                     {project.status}
                   </span>
                 </div>
-                <h3 className="font-display text-xl text-white group-hover:text-[#d4b56e] transition-colors">
+                <h3 className="font-display text-xl text-white">
                   {project.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-white/65">{project.desc}</p>
+                <p className="mt-2 text-xs leading-relaxed text-[#aaa397] font-sans">{project.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -418,69 +408,56 @@ export default function AboutPage() {
       </section>
 
       {/* =========================================================
-          CONTACT & LOCATION
+          CONTACT & MEMBERSHIP
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-14 mx-auto max-w-[1200px]">
-        <div className="mb-14">
-          <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#c8a85f]">
+      <section className="py-24 px-6 lg:px-12 mx-auto max-w-[1360px]">
+        <div className="mb-14 border-b border-white/10 pb-6">
+          <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.24em] text-[#b89a5a]">
             ÌSOPỌ̀ · CONTACT THE ASSOCIATION
-          </p>
-          <h2 className="mt-2 font-display text-3xl md:text-5xl text-white">Get in Touch</h2>
+          </span>
+          <h2 className="mt-2 font-display text-3xl sm:text-4xl text-[#f4f0e7]">Get in Touch</h2>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-2 items-start">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportOnce}
-            variants={staggerContainer}
-            className="space-y-5"
-          >
+          <div className="space-y-4">
             {contactChannels.map((channel) => {
               const Icon = channel.icon;
               return (
-                <motion.div
+                <div
                   key={channel.label}
-                  variants={fadeUp}
-                  className="flex items-start gap-5 rounded-xl border border-white/10 bg-[#121c30] p-6"
+                  className="flex items-start gap-4 border border-white/10 bg-[#0b1627] p-6"
                 >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#d4b56e]/40 bg-[#0d1627] text-[#d4b56e]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#b89a5a]/40 bg-[#07111f] text-[#d4b56e]">
                     <Icon size={18} />
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
+                    <p className="text-[10px] font-sans font-semibold uppercase tracking-widest text-[#b89a5a]">
                       {channel.label}
                     </p>
-                    <p className="mt-1 text-base text-white/85">{channel.value}</p>
+                    <p className="mt-1 text-sm sm:text-base text-white/90">{channel.value}</p>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
 
           {/* Membership CTA */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportOnce}
-            variants={fadeIn}
-            className="rounded-2xl border border-[#d4b56e]/30 bg-gradient-to-br from-[#121c30] to-[#0d1627] p-8 md:p-10 shadow-2xl"
-          >
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#d4b56e]/40 bg-[#0d1627] text-[#d4b56e] mb-6">
+          <div className="border border-[#b89a5a]/40 bg-[#0b1627] p-8 md:p-10 shadow-2xl">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#b89a5a]/40 bg-[#07111f] text-[#d4b56e] mb-6">
               <Users size={22} />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
+            <span className="text-[10px] font-sans font-semibold uppercase tracking-widest text-[#b89a5a] block">
               Ìdásílẹ̀ Ẹgbẹ́ · Membership
             </span>
-            <h3 className="mt-2 font-display text-2xl text-white">
+            <h3 className="mt-2 font-display text-2xl sm:text-3xl text-white">
               Are you a Mogaji of Ibadanland?
             </h3>
-            <p className="mt-4 text-base leading-8 text-white/70">
+            <p className="mt-4 text-sm leading-relaxed text-[#f4f0e7]/75 font-sans">
               If you have been duly installed as the Mogaji of your family compound, you are
-              eligible for full membership of the Association of Mogajis of Ibadanland. Join your
+              eligible for full membership in the Association of Mogajis of Ibadanland. Join your
               fellow compound leaders in preserving our collective heritage.
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-white/70">
+            <ul className="mt-6 space-y-2 text-xs text-[#aaa397] font-sans">
               {[
                 "Official installation certificate required",
                 "Recognition by Olubadan Palace Council",
@@ -496,12 +473,12 @@ export default function AboutPage() {
             <div className="mt-8">
               <a
                 href="mailto:info@mogajisofibadan.org.ng"
-                className="inline-flex items-center gap-3 bg-[#d4b56e] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#0d1627] transition hover:bg-[#b99a58]"
+                className="inline-flex items-center gap-3 border border-[#b89a5a] bg-[#b89a5a] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.18em] text-[#07111f] transition hover:bg-[#d4b56e]"
               >
                 <FileText size={13} /> Apply for Membership
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

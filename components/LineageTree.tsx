@@ -167,18 +167,18 @@ export default function LineageTree({
   const activeTree = lineageTrees[selectedFamilyKey] || lineageTrees["odugade"];
 
   return (
-    <div className="rounded-2xl border border-[#d4b56e]/30 bg-[#08111f] p-6 text-[#f5f1e8] shadow-2xl">
+    <div className="border border-[#b89a5a]/30 bg-[#07111f] p-6 text-[#f4f0e7] shadow-2xl">
       {/* Header & Family Switcher */}
       <div className="flex flex-col gap-4 border-b border-white/10 pb-6 md:flex-row md:items-center md:justify-between">
         <div>
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
-            <Sparkles size={14} className="text-[#d4b56e]" />
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#d4b56e]">
+            <Sparkles size={14} />
             <span>ÀWỌN ÌDÍLÈ · VISUAL FAMILY TREE & GENEALOGY</span>
           </div>
           <h3 className="mt-1 font-display text-2xl text-white">
             {activeTree.familyName}
           </h3>
-          <p className="mt-0.5 text-xs text-white/60">
+          <p className="mt-0.5 text-xs text-[#aaa397]">
             {activeTree.compoundName} ({activeTree.yoruba})
           </p>
         </div>
@@ -192,14 +192,15 @@ export default function LineageTree({
             return (
               <button
                 key={key}
+                type="button"
                 onClick={() => {
                   setSelectedFamilyKey(key);
                   setActiveNode(null);
                 }}
-                className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition-all ${
+                className={`px-4 py-1.5 text-xs font-semibold uppercase tracking-wider transition-all ${
                   isSelected
-                    ? "bg-[#d4b56e] text-[#0d1627] shadow-md"
-                    : "border border-white/15 bg-[#121c30] text-white/65 hover:border-[#d4b56e]/50 hover:text-white"
+                    ? "bg-[#b89a5a] text-[#07111f]"
+                    : "border border-white/15 bg-[#0b1627] text-[#aaa397] hover:border-[#b89a5a]/50 hover:text-white"
                 }`}
               >
                 {tree.compoundName.split(" ")[0]} Tree
@@ -210,8 +211,8 @@ export default function LineageTree({
       </div>
 
       {/* Tree Visualization Workspace */}
-      <div className="relative mt-8 min-h-[460px] overflow-x-auto rounded-xl border border-white/10 bg-[#0d1728] p-8">
-        <div className="mx-auto flex max-w-[800px] flex-col items-center gap-12">
+      <div className="relative mt-8 min-h-[440px] overflow-x-auto border border-white/10 bg-[#050c17] p-8">
+        <div className="mx-auto flex max-w-[800px] flex-col items-center gap-10">
           {/* Render Root Generation 1 */}
           <RenderNodeLevel
             node={activeTree.root}
@@ -228,30 +229,31 @@ export default function LineageTree({
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 15 }}
-            className="mt-6 rounded-xl border border-[#d4b56e]/40 bg-[#121c30] p-6 shadow-2xl"
+            className="mt-6 border border-[#b89a5a]/40 bg-[#0b1627] p-6 shadow-2xl"
           >
             <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/10 pb-4">
               <div>
-                <span className="inline-block rounded border border-[#d4b56e]/40 bg-[#0d1627] px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#d4b56e]">
+                <span className="border border-[#b89a5a]/40 bg-[#07111f] px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-[#d4b56e] inline-block">
                   {activeNode.status} · {activeNode.generation}
                 </span>
                 <h4 className="mt-2 font-display text-2xl text-white">
                   {activeNode.name}
                 </h4>
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#c8a85f]">
+                <p className="text-xs text-[#b89a5a]">
                   {activeNode.title} ({activeNode.era})
                 </p>
               </div>
 
               <button
+                type="button"
                 onClick={() => setActiveNode(null)}
-                className="rounded border border-white/15 bg-[#0d1627] px-3 py-1 text-xs uppercase tracking-wider text-white/60 hover:text-white"
+                className="border border-white/15 bg-[#07111f] px-3 py-1 text-xs uppercase tracking-wider text-[#aaa397] hover:text-white"
               >
                 Close
               </button>
             </div>
 
-            <p className="mt-4 text-sm leading-7 text-white/80">{activeNode.bio}</p>
+            <p className="mt-4 text-sm leading-relaxed text-[#f4f0e7]/80 font-sans">{activeNode.bio}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -275,52 +277,49 @@ function RenderNodeLevel({
   return (
     <div className="flex flex-col items-center w-full">
       {/* Node Card */}
-      <motion.button
+      <button
+        type="button"
         onClick={() => onSelectNode(node)}
-        whileHover={{ scale: 1.04 }}
-        whileTap={{ scale: 0.98 }}
-        className={`group relative flex w-full max-w-[440px] items-center gap-4 rounded-xl border p-4 text-left shadow-xl transition-all ${
+        className={`group relative flex w-full max-w-[440px] items-center gap-4 border p-4 text-left transition-all ${
           isSelected
-            ? "border-white bg-[#d4b56e] text-[#0d1627]"
+            ? "border-white bg-[#b89a5a] text-[#07111f]"
             : isIncumbent
-            ? "border-[#d4b56e] bg-[#121c30] text-white hover:bg-[#18243c]"
+            ? "border-[#b89a5a] bg-[#0b1627] text-white hover:bg-[#0f1e36]"
             : isMonarch
-            ? "border-[#8a4f2f] bg-[#1a2334] text-white hover:bg-[#202b3f]"
-            : "border-white/15 bg-[#0d1627] text-white/85 hover:border-white/40"
+            ? "border-[#9a5b43] bg-[#141b29] text-white hover:bg-[#1a2336]"
+            : "border-white/15 bg-[#07111f] text-[#f4f0e7] hover:border-white/40"
         }`}
       >
         <div
-          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border shadow-md ${
+          className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border ${
             isSelected
-              ? "border-[#0d1627] bg-[#0d1627] text-[#d4b56e]"
+              ? "border-[#07111f] bg-[#07111f] text-[#d4b56e]"
               : isMonarch
-              ? "border-[#8a4f2f] bg-[#8a4f2f] text-white"
-              : "border-[#d4b56e]/40 bg-[#0d1627] text-[#d4b56e]"
+              ? "border-[#9a5b43] bg-[#9a5b43] text-white"
+              : "border-[#b89a5a]/40 bg-[#07111f] text-[#d4b56e]"
           }`}
         >
           {isMonarch ? (
-            <Crown size={22} />
+            <Crown size={20} />
           ) : isIncumbent ? (
-            <Shield size={20} />
+            <Shield size={18} />
           ) : (
-            <User size={20} />
+            <User size={18} />
           )}
         </div>
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <span
-              className={`text-[9px] font-bold uppercase tracking-widest ${
-                isSelected ? "text-[#0d1627]/80" : "text-[#c8a85f]"
-              }`}
-            >
-              {node.generation} · {node.era}
-            </span>
-          </div>
+          <span
+            className={`text-[9px] font-sans font-semibold uppercase tracking-widest block ${
+              isSelected ? "text-[#07111f]/80" : "text-[#b89a5a]"
+            }`}
+          >
+            {node.generation} · {node.era}
+          </span>
 
           <h5
             className={`font-display text-lg leading-snug truncate ${
-              isSelected ? "text-[#0d1627]" : "text-white"
+              isSelected ? "text-[#07111f]" : "text-white"
             }`}
           >
             {node.name}
@@ -328,7 +327,7 @@ function RenderNodeLevel({
 
           <p
             className={`text-xs truncate ${
-              isSelected ? "text-[#0d1627]/75" : "text-white/60"
+              isSelected ? "text-[#07111f]/75" : "text-[#aaa397]"
             }`}
           >
             {node.title}
@@ -338,16 +337,16 @@ function RenderNodeLevel({
         <ChevronRight
           size={16}
           className={`shrink-0 ${
-            isSelected ? "text-[#0d1627]" : "text-[#d4b56e]"
+            isSelected ? "text-[#07111f]" : "text-[#d4b56e]"
           }`}
         />
-      </motion.button>
+      </button>
 
       {/* Downward Connecting Vertical Line & Children */}
       {node.children && node.children.length > 0 && (
         <div className="flex flex-col items-center w-full mt-4">
-          <div className="h-8 w-0.5 bg-[#d4b56e]/40" />
-          <div className="flex flex-col sm:flex-row gap-8 items-center justify-center w-full mt-2">
+          <div className="h-8 w-[1.5px] bg-[#b89a5a]/40" />
+          <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full mt-2">
             {node.children.map((child) => (
               <RenderNodeLevel
                 key={child.id}

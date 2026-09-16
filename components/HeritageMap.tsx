@@ -11,6 +11,7 @@ import {
   Info,
   Layers,
 } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 export interface MapCompoundNode {
@@ -162,20 +163,20 @@ export default function HeritageMap() {
       ? mapCompounds
       : mapCompounds.filter((c) => c.quarter === activeQuarterFilter);
 
-  const handleZoomIn = () => setZoomLevel((z) => Math.min(z + 0.25, 1.8));
+  const handleZoomIn = () => setZoomLevel((z) => Math.min(z + 0.25, 1.75));
   const handleZoomOut = () => setZoomLevel((z) => Math.max(z - 0.25, 0.9));
   const handleResetZoom = () => setZoomLevel(1);
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-[#d4b56e]/30 bg-[#08111f] shadow-2xl">
+    <div className="relative overflow-hidden border border-[#b89a5a]/30 bg-[#07111f] shadow-2xl">
       {/* Top Map Header Controls */}
-      <div className="flex flex-col gap-4 border-b border-white/10 bg-[#0d1627] p-5 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4 border-b border-white/10 bg-[#0b1627] p-5 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
-            <Navigation size={14} className="text-[#d4b56e]" />
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#d4b56e]">
+            <Navigation size={14} />
             <span>ÌTÀN AGBO ILÉ · GEOSPATIAL HERITAGE MAP</span>
           </div>
-          <h3 className="mt-1 font-display text-xl text-white md:text-2xl">
+          <h3 className="mt-1 font-display text-xl text-[#f4f0e7] md:text-2xl">
             Historic Quarters & Ancestral Compounds
           </h3>
         </div>
@@ -183,42 +184,46 @@ export default function HeritageMap() {
         {/* Zoom Controls */}
         <div className="flex items-center gap-2">
           <button
+            type="button"
             onClick={handleZoomOut}
-            className="flex h-9 w-9 items-center justify-center rounded border border-white/15 bg-[#121c30] text-white/80 transition hover:border-[#d4b56e] hover:bg-[#d4b56e] hover:text-[#0d1627]"
+            className="flex h-9 w-9 items-center justify-center border border-white/15 bg-[#07111f] text-[#f4f0e7] transition hover:border-[#b89a5a] hover:text-[#d4b56e]"
             title="Zoom Out"
           >
-            <ZoomOut size={16} />
+            <ZoomOut size={15} />
           </button>
           <button
+            type="button"
             onClick={handleResetZoom}
-            className="flex h-9 px-3 items-center justify-center rounded border border-white/15 bg-[#121c30] text-xs font-semibold uppercase tracking-wider text-white/80 transition hover:border-[#d4b56e] hover:bg-[#d4b56e] hover:text-[#0d1627]"
+            className="flex h-9 px-3 items-center justify-center border border-white/15 bg-[#07111f] text-xs font-semibold uppercase tracking-wider text-[#aaa397] transition hover:border-[#b89a5a] hover:text-white"
             title="Reset Map View"
           >
-            <RotateCcw size={14} className="mr-1" /> Reset
+            <RotateCcw size={13} className="mr-1" /> Reset
           </button>
           <button
+            type="button"
             onClick={handleZoomIn}
-            className="flex h-9 w-9 items-center justify-center rounded border border-white/15 bg-[#121c30] text-white/80 transition hover:border-[#d4b56e] hover:bg-[#d4b56e] hover:text-[#0d1627]"
+            className="flex h-9 w-9 items-center justify-center border border-white/15 bg-[#07111f] text-[#f4f0e7] transition hover:border-[#b89a5a] hover:text-[#d4b56e]"
             title="Zoom In"
           >
-            <ZoomIn size={16} />
+            <ZoomIn size={15} />
           </button>
         </div>
       </div>
 
       {/* Quarter Filter Bar */}
-      <div className="flex items-center gap-2 overflow-x-auto border-b border-white/10 bg-[#0a1322] px-5 py-3 scrollbar-none">
-        <span className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-[#c8a85f] shrink-0 mr-2">
+      <div className="flex items-center gap-2 overflow-x-auto border-b border-white/10 bg-[#081220] px-5 py-3 scrollbar-none">
+        <span className="flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-[#b89a5a] shrink-0 mr-2">
           <Layers size={13} /> Filter:
         </span>
         {quartersList.map((q) => (
           <button
             key={q.id}
+            type="button"
             onClick={() => setActiveQuarterFilter(q.id)}
-            className={`shrink-0 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition-all ${
+            className={`shrink-0 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider transition-all ${
               activeQuarterFilter === q.id
-                ? "bg-[#d4b56e] text-[#0d1627] shadow-md"
-                : "border border-white/15 bg-[#121c30]/70 text-white/65 hover:border-[#d4b56e]/50 hover:text-white"
+                ? "bg-[#b89a5a] text-[#07111f]"
+                : "border border-white/15 bg-[#0b1627] text-[#aaa397] hover:border-[#b89a5a]/50 hover:text-white"
             }`}
           >
             {q.label}
@@ -227,50 +232,46 @@ export default function HeritageMap() {
       </div>
 
       {/* Main Map Canvas Area */}
-      <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_360px] min-h-[560px]">
+      <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_360px] min-h-[540px]">
         {/* Map Interactive Canvas */}
-        <div className="relative overflow-hidden bg-[#070e1b] min-h-[480px] flex items-center justify-center p-6 select-none">
+        <div className="relative overflow-hidden bg-[#050c17] min-h-[460px] flex items-center justify-center p-6 select-none">
           {/* Subtle Grid Background Lines */}
           <div
-            className="absolute inset-0 opacity-15 pointer-events-none"
+            className="absolute inset-0 opacity-10 pointer-events-none"
             style={{
               backgroundImage: `
-                linear-gradient(rgba(212,181,110,.2) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(212,181,110,.2) 1px, transparent 1px)
+                linear-gradient(rgba(184,154,90,.25) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(184,154,90,.25) 1px, transparent 1px)
               `,
               backgroundSize: "40px 40px",
             }}
           />
 
-          {/* Topographic Contour Shapes */}
-          <div className="pointer-events-none absolute left-[30%] top-[25%] h-[320px] w-[320px] rounded-full border border-[#d4b56e]/15 bg-[#d4b56e]/5 blur-xl" />
-          <div className="pointer-events-none absolute right-[20%] bottom-[20%] h-[280px] w-[280px] rounded-full border border-[#8a4f2f]/20 bg-[#8a4f2f]/5 blur-xl" />
-
           {/* Scaleable Canvas Container */}
           <motion.div
             animate={{ scale: zoomLevel }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="relative h-[480px] w-full max-w-[700px] rounded-2xl border border-white/10 bg-[#0d1728]/80 shadow-2xl p-4"
+            className="relative h-[460px] w-full max-w-[700px] border border-[#b89a5a]/20 bg-[#091424] p-4"
           >
             {/* Map Landmark Labels */}
-            <div className="absolute left-[46%] top-[45%] -translate-x-1/2 -translate-y-1/2 rounded border border-[#d4b56e]/40 bg-[#0d1627]/90 px-3 py-1 text-center shadow-lg backdrop-blur-sm pointer-events-none">
+            <div className="absolute left-[46%] top-[45%] -translate-x-1/2 -translate-y-1/2 border border-[#b89a5a]/40 bg-[#07111f]/90 px-3 py-1 text-center shadow-lg backdrop-blur-sm pointer-events-none">
               <span className="block font-display text-sm text-[#d4b56e]">
                 Òkè Mapo · Mapo Hill
               </span>
-              <span className="block text-[9px] uppercase tracking-widest text-white/50">
+              <span className="block text-[8px] uppercase tracking-widest text-[#aaa397]">
                 Civic Seat of Governance
               </span>
             </div>
 
-            <div className="absolute left-[58%] top-[22%] rounded border border-white/15 bg-[#0d1627]/80 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-[#c8a85f] pointer-events-none">
+            <div className="absolute left-[58%] top-[22%] border border-white/15 bg-[#07111f]/80 px-2 py-0.5 text-[8px] font-semibold uppercase tracking-widest text-[#b89a5a] pointer-events-none">
               Bere Crossroads
             </div>
 
-            <div className="absolute left-[20%] top-[58%] rounded border border-white/15 bg-[#0d1627]/80 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-[#c8a85f] pointer-events-none">
+            <div className="absolute left-[20%] top-[58%] border border-white/15 bg-[#07111f]/80 px-2 py-0.5 text-[8px] font-semibold uppercase tracking-widest text-[#b89a5a] pointer-events-none">
               Oke Ado Quarter
             </div>
 
-            <div className="absolute left-[70%] top-[65%] rounded border border-white/15 bg-[#0d1627]/80 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-[#c8a85f] pointer-events-none">
+            <div className="absolute left-[70%] top-[65%] border border-white/15 bg-[#07111f]/80 px-2 py-0.5 text-[8px] font-semibold uppercase tracking-widest text-[#b89a5a] pointer-events-none">
               Kudeti / Eleta Quarter
             </div>
 
@@ -279,130 +280,121 @@ export default function HeritageMap() {
               const isSelected = selectedCompound?.id === cp.id;
 
               return (
-                <motion.button
+                <button
                   key={cp.id}
+                  type="button"
                   onClick={() => setSelectedCompound(cp)}
                   style={{ left: `${cp.x}%`, top: `${cp.y}%` }}
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  whileHover={{ scale: 1.25 }}
-                  className={`absolute -translate-x-1/2 -translate-y-1/2 transition-transform z-20 group`}
+                  className="absolute -translate-x-1/2 -translate-y-1/2 z-20 group focus:outline-none"
                 >
                   <div className="relative flex items-center justify-center">
-                    {/* Pulse Glow for Selected Pin */}
-                    {isSelected && (
-                      <motion.div
-                        layoutId="pinGlow"
-                        className="absolute h-10 w-10 rounded-full bg-[#d4b56e]/40 animate-ping"
-                      />
-                    )}
-
                     {/* Pin Icon Container */}
                     <div
-                      className={`flex h-9 w-9 items-center justify-center rounded-full border shadow-xl transition-all ${
+                      className={`flex h-8 w-8 items-center justify-center rounded-full border shadow-xl transition-all ${
                         isSelected
-                          ? "border-white bg-[#d4b56e] text-[#0d1627] scale-110"
-                          : "border-[#d4b56e]/60 bg-[#0d1627] text-[#d4b56e] hover:border-white hover:bg-[#d4b56e] hover:text-[#0d1627]"
+                          ? "border-white bg-[#b89a5a] text-[#07111f] scale-110"
+                          : "border-[#b89a5a]/60 bg-[#07111f] text-[#d4b56e] hover:border-white hover:bg-[#b89a5a] hover:text-[#07111f]"
                       }`}
                     >
-                      <MapPin size={16} />
+                      <MapPin size={15} />
                     </div>
 
-                    {/* Pin Tooltip Hover Label */}
-                    <div className="absolute left-1/2 -top-8 -translate-x-1/2 whitespace-nowrap rounded bg-[#0d1627] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg border border-[#d4b56e]/40 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    {/* Pin Tooltip Label */}
+                    <div className="absolute left-1/2 -top-8 -translate-x-1/2 whitespace-nowrap bg-[#07111f] px-2.5 py-1 text-[9px] font-semibold uppercase tracking-wider text-white border border-[#b89a5a]/40 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                       {cp.name}
                     </div>
                   </div>
-                </motion.button>
+                </button>
               );
             })}
           </motion.div>
         </div>
 
         {/* Selected Compound Detail Inspection Panel */}
-        <div className="border-t border-white/10 lg:border-t-0 lg:border-l border-white/10 bg-[#0c1626] p-6 flex flex-col justify-between">
+        <div className="border-t border-white/10 lg:border-t-0 lg:border-l border-white/10 bg-[#081220] p-6 flex flex-col justify-between">
           <AnimatePresence mode="wait">
             {selectedCompound ? (
               <motion.div
                 key={selectedCompound.id}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 15 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
+                exit={{ opacity: 0, x: -15 }}
                 transition={{ duration: 0.25 }}
                 className="space-y-5"
               >
                 <div>
-                  <span className="inline-block rounded border border-[#d4b56e]/40 bg-[#0d1627] px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#d4b56e]">
+                  <span className="border border-[#b89a5a]/40 bg-[#07111f] px-3 py-1 text-[10px] font-sans font-semibold uppercase tracking-widest text-[#d4b56e] inline-block">
                     {selectedCompound.yoruba}
                   </span>
                   <h4 className="mt-3 font-display text-2xl text-white">
                     {selectedCompound.name}
                   </h4>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-[#c8a85f]">
+                  <p className="mt-1 text-xs text-[#b89a5a]">
                     {selectedCompound.quarter} · {selectedCompound.era}
                   </p>
                 </div>
 
                 {/* Compound Image Preview */}
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/15 bg-[#121c30] flex items-center justify-center">
+                <div className="relative aspect-[4/3] overflow-hidden border border-[#b89a5a]/30 bg-[#07111f] flex items-center justify-center">
                   {selectedCompound.image ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
+                    <Image
                       src={selectedCompound.image}
                       alt={selectedCompound.name}
-                      className="h-full w-full object-cover object-top"
+                      fill
+                      sizes="320px"
+                      className="object-cover object-top"
                     />
                   ) : (
                     <div className="flex flex-col items-center justify-center p-6 text-center">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#d4b56e]/30 bg-[#0d1627]">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#b89a5a]/30 bg-[#07111f]">
                         <Shield className="h-6 w-6 text-[#d4b56e]" />
                       </div>
-                      <span className="mt-2 text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
+                      <span className="mt-2 text-[10px] font-semibold uppercase tracking-widest text-[#b89a5a]">
                         Ancestral Lineage
                       </span>
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1626] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#081220] via-transparent to-transparent opacity-80" />
                 </div>
 
                 {/* Details Meta */}
-                <div className="space-y-3 text-sm text-white/80 border-t border-white/10 pt-4">
+                <div className="space-y-3 text-xs text-[#f4f0e7]/85 border-t border-white/10 pt-4 font-sans">
                   <div>
-                    <span className="block text-xs font-bold uppercase tracking-wider text-[#c8a85f]">
+                    <span className="block text-[10px] font-semibold uppercase tracking-wider text-[#b89a5a]">
                       Incumbent Mogaji:
                     </span>
-                    <span className="font-display text-lg text-white">
+                    <span className="font-display text-base text-white">
                       {selectedCompound.mogaji}
                     </span>
                   </div>
 
                   <div>
-                    <span className="block text-xs font-bold uppercase tracking-wider text-[#c8a85f]">
+                    <span className="block text-[10px] font-semibold uppercase tracking-wider text-[#b89a5a]">
                       Location Landmark:
                     </span>
-                    <span className="text-white/75">{selectedCompound.location}</span>
+                    <span className="text-[#aaa397]">{selectedCompound.location}</span>
                   </div>
 
                   <div>
-                    <span className="block text-xs font-bold uppercase tracking-wider text-[#c8a85f]">
+                    <span className="block text-[10px] font-semibold uppercase tracking-wider text-[#b89a5a]">
                       Historical Significance:
                     </span>
-                    <p className="mt-1 text-xs leading-6 text-white/70">
+                    <p className="mt-1 text-xs leading-relaxed text-[#f4f0e7]/75">
                       {selectedCompound.desc}
                     </p>
                   </div>
                 </div>
               </motion.div>
             ) : (
-              <div className="flex flex-col items-center justify-center py-20 text-center text-white/50">
-                <Info size={28} className="mb-2 text-[#d4b56e]" />
-                <p className="text-sm">Click any map pin to inspect compound details.</p>
+              <div className="flex flex-col items-center justify-center py-20 text-center text-[#aaa397]">
+                <Info size={24} className="mb-2 text-[#d4b56e]" />
+                <p className="text-xs">Click any map pin to inspect compound details.</p>
               </div>
             )}
           </AnimatePresence>
 
           <div className="mt-6 border-t border-white/10 pt-4 text-center">
-            <span className="text-[10px] uppercase tracking-widest text-white/40">
+            <span className="text-[9px] uppercase tracking-widest text-[#aaa397]">
               Interactive Geospatial Map · Magajis of Ibadan Land
             </span>
           </div>

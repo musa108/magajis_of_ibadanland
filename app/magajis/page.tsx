@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, Award, MapPin, Calendar, Shield } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 import LineageTree from "@/components/LineageTree";
@@ -231,54 +232,47 @@ export default function MagajisPage() {
   });
 
   return (
-    <main className="min-h-screen bg-[#0d1627] text-[#f5f1e8]">
+    <main className="min-h-screen bg-[#07111f] text-[#f4f0e7]">
       <Navbar />
 
       {/* =========================================================
           HERO BANNER
       ========================================================= */}
-      <section className="relative pt-36 pb-24 px-6 lg:px-14 overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08111f] via-[#0d1627] to-[#0d1627]" />
-        <div className="pointer-events-none absolute left-[15%] top-[10%] h-[500px] w-[500px] rounded-full bg-[#b99a58] opacity-15 blur-[160px]" />
-        <div className="pointer-events-none absolute right-[5%] bottom-[5%] h-[350px] w-[350px] rounded-full bg-[#8a4f2f] opacity-10 blur-[140px]" />
-
-        <div className="relative z-10 mx-auto max-w-[1200px]">
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#b99a58]/40 bg-[#0d1627]/80 px-4 py-1.5 backdrop-blur-md mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#d4b56e] animate-pulse" />
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c8a85f]">
-              ÀWỌN MÒGÁJÌ ILẸ̀ ÌBÀDÀN · LEADERSHIP & CUSTODIANS
-            </span>
+      <section className="relative pt-36 pb-24 px-6 lg:px-12 overflow-hidden border-b border-[#b89a5a]/20">
+        <div className="mx-auto max-w-[1360px]">
+          <div className="mb-6 flex items-center gap-3">
+            <span className="h-[1px] w-8 bg-[#b89a5a]" />
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#d4b56e]">
+              ÀWỌN MÒGÁJÌ ILẸ̀ ÌBÀDÀN · CUSTODIANS OF LIVING LINEAGE
+            </p>
           </div>
 
           <div className="max-w-[950px]">
-            <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#c8a85f] mb-3">
-              THE PEOPLE
-            </p>
-            <h1 className="font-display text-[clamp(3.2rem,7.5vw,7.5rem)] font-normal leading-[0.95] tracking-[-0.04em] text-white">
+            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.02] tracking-[-0.035em] text-[#f4f0e7]">
               The <span className="italic text-[#d4b56e]">Magajis.</span>
             </h1>
           </div>
 
-          <p className="mt-8 max-w-2xl text-base leading-9 text-white/80 md:text-xl border-l-2 border-[#d4b56e] pl-6">
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-[#f4f0e7]/85 sm:text-lg sm:leading-8 border-l-2 border-[#b89a5a] pl-6 font-sans">
             The custodians, representatives, and voices of ancestral family compounds (<span className="italic text-[#d4b56e]">Agbo Ilé</span>) across Ibadanland.
           </p>
         </div>
       </section>
 
       {/* =========================================================
-          EXECUTIVE LEADERSHIP SPOTLIGHT
+          EXECUTIVE COUNCIL SPOTLIGHT
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-14 mx-auto max-w-[1200px]">
-        <div className="mb-14 border-b border-white/15 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <section className="py-24 px-6 lg:px-12 mx-auto max-w-[1360px]">
+        <div className="mb-14 border-b border-white/10 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#b89a5a]">
               EXECUTIVE LEADERSHIP · ẸGBẸ́ ÀWỌN MÒGÁJÌ
-            </p>
-            <h2 className="mt-2 font-display text-3xl md:text-5xl text-white">
+            </span>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl text-[#f4f0e7]">
               Association Executive Council
             </h2>
           </div>
-          <span className="rounded-full border border-[#d4b56e]/40 bg-[#0d1627]/80 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#d4b56e]">
+          <span className="border border-[#b89a5a]/50 bg-[#07111f] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#d4b56e]">
             Incumbent Executive Term
           </span>
         </div>
@@ -291,54 +285,55 @@ export default function MagajisPage() {
               whileInView="visible"
               viewport={viewportOnce}
               variants={fadeUp}
-              className="group relative overflow-hidden rounded-xl border border-white/15 bg-[#121c30] p-6 md:p-7 shadow-2xl transition-all duration-500 hover:border-[#d4b56e]/50 flex flex-col justify-between"
+              className="group border border-[#b89a5a]/30 bg-[#0b1627] p-7 transition-colors duration-500 hover:border-[#b89a5a] flex flex-col justify-between"
             >
               <div>
-                {/* Leader Portrait */}
-                <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-white/20 bg-[#182233] flex items-center justify-center">
+                {/* Portrait */}
+                <div className="relative aspect-[4/5] w-full overflow-hidden border border-[#b89a5a]/20 bg-[#07111f] flex items-center justify-center">
                   {leader.image ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
+                    <Image
                       src={leader.image}
                       alt={leader.name}
-                      className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                   ) : (
                     <div className="flex flex-col items-center justify-center p-6 text-center">
-                      <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#d4b56e]/40 bg-[#0d1627]">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#b89a5a]/40 bg-[#07111f]">
                         <Shield className="h-8 w-8 text-[#d4b56e]" />
                       </div>
-                      <span className="mt-3 text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
+                      <span className="mt-3 text-xs font-semibold uppercase tracking-widest text-[#b89a5a]">
                         Certified Mogaji
                       </span>
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d1627]/90 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b1627] via-transparent to-transparent opacity-70" />
                   <div className="absolute top-3 right-3 z-10">
-                    <span className="inline-block rounded-full border border-[#d4b56e]/60 bg-[#0d1627]/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#d4b56e] backdrop-blur-sm">
+                    <span className="border border-[#b89a5a]/60 bg-[#07111f]/90 px-3 py-1 text-[10px] font-sans font-semibold uppercase tracking-wider text-[#d4b56e] backdrop-blur-sm">
                       {leader.yorubaRole}
                     </span>
                   </div>
                 </div>
 
                 <div className="mt-6">
-                  <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
+                  <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.2em] text-[#b89a5a]">
                     {leader.compound}
                   </span>
-                  <h3 className="mt-1 font-display text-2xl text-white group-hover:text-[#d4b56e] transition-colors leading-tight">
+                  <h3 className="mt-1 font-display text-2xl sm:text-3xl text-[#f4f0e7] group-hover:text-[#d4b56e] transition-colors leading-tight">
                     {leader.name}
                   </h3>
-                  <p className="mt-1 text-sm text-white/65">
+                  <p className="mt-1 text-xs text-[#aaa397]">
                     {leader.title}
                   </p>
 
-                  <div className="mt-5 space-y-2 text-sm text-white/75 border-t border-white/10 pt-4">
+                  <div className="mt-5 space-y-2 text-xs text-[#f4f0e7]/75 border-t border-white/10 pt-4">
                     <div className="flex items-center gap-2">
-                      <MapPin size={13} className="text-[#d4b56e] shrink-0" />
+                      <MapPin size={12} className="text-[#b89a5a] shrink-0" />
                       <span>{leader.location}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Award size={13} className="text-[#d4b56e] shrink-0" />
+                      <Award size={12} className="text-[#b89a5a] shrink-0" />
                       <span>{leader.installedBy}</span>
                     </div>
                   </div>
@@ -346,10 +341,11 @@ export default function MagajisPage() {
               </div>
 
               <button
+                type="button"
                 onClick={() => setSelectedMogaji(leader)}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded border border-[#d4b56e]/40 bg-[#0d1627] px-4 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#d4b56e] transition-all hover:bg-[#d4b56e] hover:text-[#0d1627]"
+                className="mt-6 inline-flex w-full items-center justify-center border border-[#b89a5a]/50 bg-[#07111f] px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#d4b56e] transition-all hover:bg-[#b89a5a] hover:text-[#07111f]"
               >
-                View Full Biography
+                View Full Biography & Lineage
               </button>
             </motion.div>
           ))}
@@ -357,16 +353,16 @@ export default function MagajisPage() {
       </section>
 
       {/* =========================================================
-          SEARCH & DIRECTORY GRID
+          DIRECTORY SEARCH & FILTER
       ========================================================= */}
-      <section className="py-20 px-6 lg:px-14 bg-[#08111f] border-t border-white/10">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between mb-12">
+      <section className="py-20 px-6 lg:px-12 bg-[#050c17] border-t border-white/10">
+        <div className="mx-auto max-w-[1360px]">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between mb-12 border-b border-white/10 pb-8">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c8a85f]">
+              <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#b89a5a]">
                 MOGAJI DIRECTORY · ÀWỌN MÒGÁJÌ PÁTÁPÁTÁ
-              </p>
-              <h2 className="mt-1 font-display text-3xl md:text-4xl text-white">
+              </span>
+              <h2 className="mt-1 font-display text-3xl sm:text-4xl text-[#f4f0e7]">
                 Family Compound Lineage Heads
               </h2>
             </div>
@@ -374,29 +370,31 @@ export default function MagajisPage() {
             {/* Search Input & Filter */}
             <div className="flex flex-wrap items-center gap-4">
               <div className="relative w-full md:w-72">
-                <Search size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/40" />
+                <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#aaa397]" />
                 <input
                   type="text"
                   placeholder="Search Mogaji or Compound..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full rounded-full border border-white/20 bg-[#121c30] py-3 pl-10 pr-4 text-sm text-white placeholder-white/40 focus:border-[#d4b56e] focus:outline-none"
+                  className="w-full border border-white/20 bg-[#0b1627] py-2.5 pl-10 pr-4 text-xs text-white placeholder-[#aaa397] focus:border-[#b89a5a] focus:outline-none"
                 />
               </div>
 
-              <div className="flex items-center rounded-full border border-white/20 bg-[#121c30] p-1">
+              <div className="flex items-center border border-white/20 bg-[#0b1627] p-1">
                 <button
+                  type="button"
                   onClick={() => setFilterRole("all")}
-                  className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
-                    filterRole === "all" ? "bg-[#d4b56e] text-[#0d1627]" : "text-white/60 hover:text-white"
+                  className={`px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
+                    filterRole === "all" ? "bg-[#b89a5a] text-[#07111f]" : "text-[#aaa397] hover:text-white"
                   }`}
                 >
                   All Mogajis
                 </button>
                 <button
+                  type="button"
                   onClick={() => setFilterRole("executive")}
-                  className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
-                    filterRole === "executive" ? "bg-[#d4b56e] text-[#0d1627]" : "text-white/60 hover:text-white"
+                  className={`px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
+                    filterRole === "executive" ? "bg-[#b89a5a] text-[#07111f]" : "text-[#aaa397] hover:text-white"
                   }`}
                 >
                   Executives
@@ -410,39 +408,38 @@ export default function MagajisPage() {
             {filteredMogajis.map((profile) => (
               <motion.div
                 key={profile.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 onClick={() => setSelectedMogaji(profile)}
-                className="group cursor-pointer rounded-xl border border-white/10 bg-[#121c30]/80 p-5 transition-all duration-300 hover:border-[#d4b56e] hover:bg-[#121c30]"
+                className="group cursor-pointer border border-white/10 bg-[#0b1627] p-5 transition-all duration-300 hover:border-[#b89a5a] flex gap-4 items-center"
               >
-                <div className="flex gap-4 items-center">
-                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-[#d4b56e]/40 bg-[#0d1627] flex items-center justify-center">
-                    {profile.image ? (
-                      /* eslint-disable-next-line @next/next/no-img-element */
-                      <img
-                        src={profile.image}
-                        alt={profile.name}
-                        className="h-full w-full object-cover object-top"
-                      />
-                    ) : (
-                      <span className="font-display text-lg tracking-wider text-[#d4b56e]">
-                        {profile.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-                      </span>
-                    )}
-                  </div>
-
-                  <div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
-                      {profile.yorubaRole || profile.role}
+                <div className="relative h-16 w-16 shrink-0 overflow-hidden border border-[#b89a5a]/40 bg-[#07111f] flex items-center justify-center">
+                  {profile.image ? (
+                    <Image
+                      src={profile.image}
+                      alt={profile.name}
+                      fill
+                      sizes="64px"
+                      className="object-cover object-top"
+                    />
+                  ) : (
+                    <span className="font-display text-lg tracking-wider text-[#d4b56e]">
+                      {profile.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
                     </span>
-                    <h4 className="font-display text-lg text-white group-hover:text-[#d4b56e] transition-colors leading-snug">
-                      {profile.name}
-                    </h4>
-                    <p className="mt-0.5 text-sm text-white/55">
-                      {profile.compound}
-                    </p>
-                  </div>
+                  )}
+                </div>
+
+                <div className="min-w-0">
+                  <span className="text-[10px] font-sans font-semibold uppercase tracking-widest text-[#b89a5a] truncate block">
+                    {profile.yorubaRole || profile.role}
+                  </span>
+                  <h4 className="font-display text-lg text-white group-hover:text-[#d4b56e] transition-colors leading-snug truncate">
+                    {profile.name}
+                  </h4>
+                  <p className="mt-0.5 text-xs text-[#aaa397] truncate">
+                    {profile.compound}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -461,18 +458,19 @@ export default function MagajisPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedMogaji(null)}
-              className="absolute inset-0 bg-[#040812]/85 backdrop-blur-md"
+              className="absolute inset-0 bg-[#040912]/85 backdrop-blur-md"
             />
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              initial={{ opacity: 0, scale: 0.96, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative z-10 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl border border-[#d4b56e]/50 bg-[#0d1627] p-6 sm:p-8 shadow-2xl text-[#f5f1e8]"
+              exit={{ opacity: 0, scale: 0.96, y: 15 }}
+              className="relative z-10 w-full max-w-3xl max-h-[90vh] overflow-y-auto border border-[#b89a5a]/50 bg-[#07111f] p-6 sm:p-8 shadow-2xl text-[#f4f0e7]"
             >
               <button
+                type="button"
                 onClick={() => setSelectedMogaji(null)}
-                className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-[#121c30] text-white/70 transition hover:bg-white hover:text-[#0d1627]"
+                className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center border border-white/20 bg-[#0b1627] text-white transition hover:border-[#b89a5a] hover:text-[#d4b56e]"
               >
                 <X size={18} />
               </button>
@@ -480,21 +478,23 @@ export default function MagajisPage() {
               {/* Drawer Modal Header Tabs */}
               <div className="flex items-center gap-2 border-b border-white/10 pb-4 mb-6 pr-12">
                 <button
+                  type="button"
                   onClick={() => setModalTab("bio")}
-                  className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
+                  className={`px-4 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
                     modalTab === "bio"
-                      ? "bg-[#d4b56e] text-[#0d1627] shadow-md"
-                      : "border border-white/15 bg-[#121c30] text-white/60 hover:text-white"
+                      ? "bg-[#b89a5a] text-[#07111f]"
+                      : "border border-white/15 bg-[#0b1627] text-[#aaa397] hover:text-white"
                   }`}
                 >
                   Biography & Profile
                 </button>
                 <button
+                  type="button"
                   onClick={() => setModalTab("tree")}
-                  className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
+                  className={`px-4 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
                     modalTab === "tree"
-                      ? "bg-[#d4b56e] text-[#0d1627] shadow-md"
-                      : "border border-white/15 bg-[#121c30] text-white/60 hover:text-white"
+                      ? "bg-[#b89a5a] text-[#07111f]"
+                      : "border border-white/15 bg-[#0b1627] text-[#aaa397] hover:text-white"
                   }`}
                 >
                   Interactive Lineage Tree
@@ -503,22 +503,21 @@ export default function MagajisPage() {
 
               {modalTab === "bio" ? (
                 <div className="grid gap-8 md:grid-cols-[220px_1fr]">
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-lg border border-white/20 bg-[#182233] flex items-center justify-center">
+                  <div className="relative aspect-[3/4] overflow-hidden border border-[#b89a5a]/40 bg-[#0b1627] flex items-center justify-center">
                     {selectedMogaji.image ? (
-                      /* eslint-disable-next-line @next/next/no-img-element */
-                      <img
+                      <Image
                         src={selectedMogaji.image}
                         alt={selectedMogaji.name}
-                        className="h-full w-full object-cover object-top"
+                        fill
+                        sizes="220px"
+                        className="object-cover object-top"
                       />
                     ) : (
                       <div className="flex flex-col items-center justify-center p-6 text-center">
-                        <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#d4b56e]/40 bg-[#0d1627]">
-                          <span className="font-display text-2xl tracking-widest text-[#d4b56e]">
-                            {selectedMogaji.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-                          </span>
-                        </div>
-                        <span className="mt-3 text-xs font-bold uppercase tracking-widest text-[#c8a85f]">
+                        <span className="font-display text-2xl tracking-widest text-[#d4b56e]">
+                          {selectedMogaji.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                        </span>
+                        <span className="mt-3 text-[10px] font-semibold uppercase tracking-widest text-[#b89a5a]">
                           Certified Mogaji
                         </span>
                       </div>
@@ -526,34 +525,34 @@ export default function MagajisPage() {
                   </div>
 
                   <div>
-                    <span className="inline-block rounded bg-[#d4b56e]/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#d4b56e] border border-[#d4b56e]/30">
+                    <span className="border border-[#b89a5a]/40 bg-[#07111f] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#d4b56e]">
                       {selectedMogaji.role}
                     </span>
 
-                    <h3 className="mt-3 font-display text-2xl md:text-3xl text-white">
+                    <h3 className="mt-3 font-display text-2xl sm:text-3xl text-white">
                       {selectedMogaji.name}
                     </h3>
 
-                    <p className="mt-1 text-sm text-[#c8a85f]">
+                    <p className="mt-1 text-xs text-[#b89a5a]">
                       {selectedMogaji.title}
                     </p>
 
-                    <div className="mt-4 grid gap-2 text-sm text-white/75 border-t border-b border-white/10 py-3">
+                    <div className="mt-4 grid gap-2 text-xs text-[#aaa397] border-t border-b border-white/10 py-3 font-sans">
                       <div className="flex items-center gap-2">
-                        <MapPin size={13} className="text-[#d4b56e]" />
+                        <MapPin size={12} className="text-[#b89a5a]" />
                         <span>{selectedMogaji.compound} ({selectedMogaji.location})</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Award size={13} className="text-[#d4b56e]" />
+                        <Award size={12} className="text-[#b89a5a]" />
                         <span>Installed by: {selectedMogaji.installedBy}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Calendar size={13} className="text-[#d4b56e]" />
-                        <span>Tenure/Year: {selectedMogaji.installedYear}</span>
+                        <Calendar size={12} className="text-[#b89a5a]" />
+                        <span>Tenure / Year: {selectedMogaji.installedYear}</span>
                       </div>
                     </div>
 
-                    <div className="mt-5 space-y-3 text-sm leading-7 text-white/80">
+                    <div className="mt-5 space-y-3 text-sm leading-relaxed text-[#f4f0e7]/85 font-sans">
                       <h4 className="font-semibold text-white uppercase text-xs tracking-wider text-[#d4b56e]">
                         Biography & Cultural Profile
                       </h4>
@@ -563,15 +562,15 @@ export default function MagajisPage() {
                     </div>
 
                     {selectedMogaji.education && (
-                      <div className="mt-4 text-xs text-white/75">
-                        <span className="font-bold text-[#c8a85f]">Education: </span>
+                      <div className="mt-4 text-xs text-[#aaa397]">
+                        <span className="font-bold text-[#b89a5a]">Education: </span>
                         {selectedMogaji.education}
                       </div>
                     )}
 
                     {selectedMogaji.career && (
-                      <div className="mt-2 text-xs text-white/75">
-                        <span className="font-bold text-[#c8a85f]">Career/Profession: </span>
+                      <div className="mt-2 text-xs text-[#aaa397]">
+                        <span className="font-bold text-[#b89a5a]">Career / Profession: </span>
                         {selectedMogaji.career}
                       </div>
                     )}
