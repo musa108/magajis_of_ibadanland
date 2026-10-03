@@ -107,6 +107,28 @@ const compounds = [
       "Nestled near the iconic Mapo Hill, the Akinade compound has been a beacon of peace-building and youth leadership development in Ibadanland.",
     heritage: "Peace, leadership, and civic harmony compound near Mapo.",
   },
+  {
+    id: "atere",
+    name: "Agboole Atere (Ile Onilu)",
+    yoruba: "Agbo Ilé Atere · Ilé Onílù",
+    location: "Ayeye, Ibadan Central",
+    quarter: "Ibadan Central",
+    mogaji: "Mogaji Abdul Gafar Olanrewaju Gbadamosi",
+    description:
+      "A revered 200+ year-old ancestral compound founded by patriarch Okekegan originating from Orile Owu. The larger compound is renowned as Ile Onilu, where Ayanwale Akanbi Gbadamosi honed his trade and rose to become Aare Onilu of Ibadanland in the 1970s.",
+    heritage: "200+ year Owu warrior lineage and ancestral seat of the Aare Onilu of Ibadanland.",
+  },
+  {
+    id: "bada",
+    name: "Bada Compound",
+    yoruba: "Agbo Ilé Bada",
+    location: "Oke Offa Atipe, Ibadan",
+    quarter: "Ibadan North-East / Central",
+    mogaji: "Hon. Olasupo Ibrahim Ademola",
+    description:
+      "A historic compound founded by brothers Fagbenla and Orotoki with roots traced to Jaga Aase (Ajase Ipo, near Offa). The lineage established founding villages at Aayun (Akinyele LG) and Oloffa (Ona Ara LG), producing illustrious professionals across diverse fields.",
+    heritage: "Founded by brothers Fagbenla & Orotoki with historical roots in Jaga Aase (Ajase Ipo).",
+  },
 ];
 
 const historicQuarters = [

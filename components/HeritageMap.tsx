@@ -140,6 +140,32 @@ const mapCompounds: MapCompoundNode[] = [
     y: 40,
     desc: "Deeply rooted in Ibadan's ironworking and blacksmithing traditions that powered early warrior defense.",
   },
+  {
+    id: "atere",
+    name: "Agboole Atere (Ile Onilu)",
+    yoruba: "Agbo Ilé Atere · Ilé Onílù",
+    quarter: "Central / Aremo",
+    location: "Ayeye, Ibadan Central",
+    mogaji: "Mogaji Abdul Gafar Olanrewaju Gbadamosi",
+    era: "200+ Year Settlement",
+    x: 38,
+    y: 36,
+    desc: "Founded over 200 years ago by patriarch Okekegan from Orile Owu. Ancestral home of Aare Onilu of Ibadanland Ayanwale Akanbi Gbadamosi.",
+    image: "/images/mogaji-abdul-gafar-gbadamosi.jpg",
+  },
+  {
+    id: "bada",
+    name: "Bada Compound",
+    yoruba: "Agbo Ilé Bada",
+    quarter: "Bere",
+    location: "Oke Offa Atipe, Ibadan",
+    mogaji: "Hon. Olasupo Ibrahim Ademola",
+    era: "Jaga Aase (Ajase Ipo) Heritage",
+    x: 60,
+    y: 32,
+    desc: "Founded by brothers Fagbenla and Orotoki, tracing roots from Jaga Aase (Ajase Ipo), with ancestral village roots at Aayun and Oloffa.",
+    image: "/images/mogaji-olasupo-ibrahim-ademola.jpg",
+  },
 ];
 
 const quartersList = [

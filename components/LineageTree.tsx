@@ -152,6 +152,102 @@ const lineageTrees: Record<string, LineageTreeData> = {
       ],
     },
   },
+
+  gbadamosi: {
+    mogajiId: "gbadamosi",
+    familyName: "Atere & Ile Onilu Lineage",
+    compoundName: "Agboole Atere (Ile Onilu)",
+    yoruba: "Ìdílé Agboole Atere · Ilé Onílù",
+    root: {
+      id: "gbadamosi-gen1",
+      name: "Patriarch Okekegan",
+      title: "Founding Patriarch from Orile Owu",
+      generation: "1st Generation",
+      era: "Over 200 Years Ago",
+      role: "Compound Founder",
+      status: "Lineage Founder",
+      bio: "Leader of the ancestral migration from Orile Owu who settled the family at Ayeye in the heart of Ibadan over two centuries ago.",
+      children: [
+        {
+          id: "gbadamosi-gen2",
+          name: "Aare Onilu Ayanwale Akanbi Gbadamosi",
+          title: "Aare Onilu of Ibadanland (1970s)",
+          generation: "2nd Generation",
+          era: "Mid-20th Century",
+          role: "Master Artisan & Cultural Custodian",
+          status: "Lineage Elder",
+          bio: "Master drummer and artisan who honed his trade at Ile Onilu and rose to become the supreme Aare Onilu of Ibadanland in the 1970s, establishing a legendary family legacy.",
+          children: [
+            {
+              id: "gbadamosi-gen3",
+              name: "Alhaji Abdul Ganiyu Gbadamosi",
+              title: "Lineage Patriarch & Mentor",
+              generation: "3rd Generation",
+              era: "20th Century",
+              role: "Family Patriarch",
+              status: "Lineage Elder",
+              bio: "Dedicated family patriarch and beloved mentor who nurtured the family's educational and civic leadership traditions.",
+              children: [
+                {
+                  id: "gbadamosi-gen4",
+                  name: "Mogaji Abdul Gafar Olanrewaju Gbadamosi",
+                  title: "Mogaji of Agboole Atere, Ayeye · Solicitor & Commissioner for Oaths",
+                  generation: "4th Generation",
+                  era: "2023 – Present",
+                  role: "Incumbent Mogaji & ITTG UK Chair",
+                  status: "Incumbent Mogaji",
+                  bio: "Installed Mogaji on 04 December 2023 by Oba Mohood Olalekan Balogun. UK-trained lawyer (LL.B, LL.M Wolverhampton), Solicitor & Commissioner for Oaths, Chair of Ibadan Think Tank Group UK.",
+                  image: "/images/mogaji-abdul-gafar-gbadamosi.jpg",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  bada: {
+    mogajiId: "bada",
+    familyName: "Bada Family Lineage",
+    compoundName: "Bada Compound (Oke Offa Atipe)",
+    yoruba: "Ìdílé Agbo Ilé Bada",
+    root: {
+      id: "bada-gen1",
+      name: "Patriarchs Fagbenla & Orotoki",
+      title: "Founding Lineage Brothers from Jaga Aase (Ajase Ipo)",
+      generation: "1st Generation",
+      era: "Founding Era",
+      role: "Compound Founders",
+      status: "Lineage Founder",
+      bio: "Brothers Fagbenla and Orotoki traced their ancestral roots from Jaga Aase (Ajase Ipo, near Offa) and founded Bada Compound at Oke Offa Atipe, establishing early satellite ancestral villages at Aayun (Akinyele LG) and Oloffa (Ona Ara LG).",
+      children: [
+        {
+          id: "bada-gen2",
+          name: "Bada Lineage Ancestors & Elders",
+          title: "Chieftaincy Elders of Oke Offa Atipe",
+          generation: "2nd Generation",
+          era: "20th Century",
+          role: "Traditional Lineage Elders",
+          status: "Lineage Elder",
+          bio: "Generations of compound elders who expanded the family's civic standing, preserved its ancestral roots, and nurtured illustrious sons and daughters across all walks of life.",
+          children: [
+            {
+              id: "bada-gen3",
+              name: "Hon. Olasupo Ibrahim Ademola",
+              title: "Mogaji Bada, Oke Offa Atipe",
+              generation: "3rd Generation",
+              era: "Incumbent Mogaji",
+              role: "Incumbent Mogaji & Civic Leader",
+              status: "Incumbent Mogaji",
+              bio: "Incumbent Mogaji of Bada Compound, Oke Offa Atipe. Dedicated to lineage preservation, compound progress, and community development across Ibadanland.",
+              image: "/images/mogaji-olasupo-ibrahim-ademola.jpg",
+            },
+          ],
+        },
+      ],
+    },
+  },
 };
 
 export default function LineageTree({
