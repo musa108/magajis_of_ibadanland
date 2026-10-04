@@ -166,6 +166,19 @@ const mapCompounds: MapCompoundNode[] = [
     desc: "Founded by brothers Fagbenla and Orotoki, tracing roots from Jaga Aase (Ajase Ipo), with ancestral village roots at Aayun and Oloffa.",
     image: "/images/mogaji-olasupo-ibrahim-ademola.jpg",
   },
+  {
+    id: "egunjenmi",
+    name: "Egunjenmi Compound",
+    yoruba: "Agbo Ilé Egunjenmi",
+    quarter: "Bere",
+    location: "Itutaba, Ita Akinloye, Oje, Ibadan",
+    mogaji: "Chief Adekunle Amidu Aremu Busari",
+    era: "Aare Latosa Era Heritage",
+    x: 54,
+    y: 24,
+    desc: "Founded by Pa Egunjenmi from Abejide Compound, Oyo Town on land granted by Aare Latosa. Illustrious lineage that produced Chief A.M.A. Akinloye and Chief Mrs. Gladys Aduke Vaughan.",
+    image: "/images/mogaji-adekunle-amidu-busari.jpg",
+  },
 ];
 
 const quartersList = [

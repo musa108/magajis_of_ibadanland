@@ -248,6 +248,48 @@ const lineageTrees: Record<string, LineageTreeData> = {
       ],
     },
   },
+
+  egunjenmi: {
+    mogajiId: "egunjenmi",
+    familyName: "Egunjenmi Family Lineage",
+    compoundName: "Egunjenmi Compound (Itutaba, Oje)",
+    yoruba: "Ìdílé Agbo Ilé Egunjenmi",
+    root: {
+      id: "egunjenmi-gen1",
+      name: "Pa Egunjenmi",
+      title: "Founding Patriarch from Abejide Compound, Oyo Town",
+      generation: "1st Generation",
+      era: "19th Century (Era of Aare Latosa)",
+      role: "Compound Founder, Farmer & Warrior",
+      status: "Lineage Founder",
+      bio: "Patriarch Pa Egunjenmi led the family from Abejide Compound in Oyo Town. Aare Latosa granted them their settlement at Itutaba ('Ibi tiwon tin tu taba'), where they established thriving agricultural estates and rode as valiant warriors under the battle-cry 'Egunjenmi, Ija Eto!'.",
+      children: [
+        {
+          id: "egunjenmi-gen2",
+          name: "Egunjenmi Lineage Elders & Nation Builders",
+          title: "Ancestral Pillars of Itutaba & Nation Builders",
+          generation: "2nd Generation",
+          era: "20th Century",
+          role: "Custodians & Prominent Leaders",
+          status: "Lineage Elder",
+          bio: "Illustrious lineage that produced Chief Meredith Adisa Akinloye (A.M.A. Akinloye) — Seriki of Ibadanland and Nigeria's first Minister of Agriculture, and educational pioneer Chief Mrs. Gladys Aduke Vaughan, founder of Omolewa School.",
+          children: [
+            {
+              id: "egunjenmi-gen3",
+              name: "Chief Adekunle Amidu Aremu Busari",
+              title: "Mogaji of Egunjenmi Compound",
+              generation: "3rd Generation",
+              era: "2023 – Present",
+              role: "Incumbent Mogaji",
+              status: "Incumbent Mogaji",
+              bio: "Installed Mogaji on 23rd January 2023. Custodian of Orisa Olufon and Orisa Alaso Funfun, host of Atipako and Abidi Elege masquerades, actively driving unity, electrification, water, and community security.",
+              image: "/images/mogaji-adekunle-amidu-busari.jpg",
+            },
+          ],
+        },
+      ],
+    },
+  },
 };
 
 export default function LineageTree({

@@ -143,6 +143,28 @@ const directoryMogajis: MogajiProfile[] = [
     isExecutive: true,
   },
   {
+    id: "egunjenmi",
+    name: "Chief Adekunle Amidu Aremu Busari",
+    title: "Mogaji of Egunjenmi Compound, Itutaba, Ita Akinloye, Oje",
+    role: "Mogaji · Community Developer & Chieftain",
+    yorubaRole: "Mògájì Agbo Ilé Egunjenmi",
+    compound: "Egunjenmi Compound (Agbo Ilé Egunjenmi)",
+    location: "Itutaba, Ita Akinloye, Oje, Ibadan",
+    installedBy: "Olubadan-in-Council",
+    installedYear: "23rd January 2023",
+    image: "/images/mogaji-adekunle-amidu-busari.jpg",
+    education: "Traditional Chieftaincy, Leadership & Community Administration",
+    career: "Community Chieftain, Cultural Custodian & Civic Developer",
+    tenure: "Installed January 2023",
+    bio: [
+      "Chief Adekunle Amidu Aremu Busari was installed as the Mogaji of the historic Egunjenmi Compound on 23rd January 2023. He is actively driving communal unity, electrification, potable water infrastructure, and security across the family quarter.",
+      "Located at Itutaba, Ita Akinloye, Oje, Egunjenmi Compound stands as a historic bastion of warriors, prosperous farmers, and nation builders. Led by founding patriarch Pa Egunjenmi, the family originally migrated from Abejide Compound in Oyo Town. The great generalissimo Aare Latosa granted them land at 'Ibi tiwon tin tu taba' (now Itutaba).",
+      "Renowned historically as extensive cultivators of cocoa, kola, and rubber, and as valiant horse-riding warriors under the battlefield battle-cry 'Egunjenmi, Ija Eto!', the family lineage expanded into agrarian settlements including Aba Alafia, Aba Oniyeye, Aba Onifila, Aba Tekuta, and Idi Osan, Olodo.",
+      "Egunjenmi Compound has bestowed prominent nation builders upon Nigeria, including Chief Meredith Adisa Akinloye (A.M.A. Akinloye) — Seriki of Ibadanland, national political leader, and Nigeria's first Minister of Agriculture; and Chief Mrs. Gladys Aduke Vaughan, pioneering founder of Omolewa School. The compound remains proud custodians of Orisa Olufon, Orisa Alaso Funfun, and hosts of the revered Atipako and Abidi Elege masquerades."
+    ],
+    isExecutive: true,
+  },
+  {
     id: "lekan-salami",
     name: "Chief Adenrele O. Lekan-Salami",
     title: "Patron & Ajia Balogun of Ibadanland",

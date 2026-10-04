@@ -129,6 +129,17 @@ const compounds = [
       "A historic compound founded by brothers Fagbenla and Orotoki with roots traced to Jaga Aase (Ajase Ipo, near Offa). The lineage established founding villages at Aayun (Akinyele LG) and Oloffa (Ona Ara LG), producing illustrious professionals across diverse fields.",
     heritage: "Founded by brothers Fagbenla & Orotoki with historical roots in Jaga Aase (Ajase Ipo).",
   },
+  {
+    id: "egunjenmi",
+    name: "Egunjenmi Compound",
+    yoruba: "Agbo Ilé Egunjenmi",
+    location: "Itutaba, Ita Akinloye, Oje, Ibadan",
+    quarter: "Ibadan North-East / Oje",
+    mogaji: "Chief Adekunle Amidu Aremu Busari",
+    description:
+      "Home of warriors, farmers, and nation builders founded by Pa Egunjenmi from Abejide Compound in Oyo Town on land granted by Aare Latosa at Itutaba. Famed for its horse-riding warriors under the battle-cry 'Egunjenmi, Ija Eto!', and for producing Chief Meredith Adisa Akinloye (first Federal Minister of Agriculture) and Chief Mrs. Gladys Aduke Vaughan.",
+    heritage: "Settled during the era of Aare Latosa; custodians of Orisa Olufon and hosts of Atipako masquerade.",
+  },
 ];
 
 const historicQuarters = [
