@@ -140,6 +140,17 @@ const compounds = [
       "Home of warriors, farmers, and nation builders founded by Pa Egunjenmi from Abejide Compound in Oyo Town on land granted by Aare Latosa at Itutaba. Famed for its horse-riding warriors under the battle-cry 'Egunjenmi, Ija Eto!', and for producing Chief Meredith Adisa Akinloye (first Federal Minister of Agriculture) and Chief Mrs. Gladys Aduke Vaughan.",
     heritage: "Settled during the era of Aare Latosa; custodians of Orisa Olufon and hosts of Atipako masquerade.",
   },
+  {
+    id: "agbon-onilabu",
+    name: "Agbon Onilabu Compound",
+    yoruba: "Agbo Ilé Agbon Onilabu",
+    location: "Agbeni, Central Ibadan",
+    quarter: "Agbeni / Central Ibadan",
+    mogaji: "Mogaji Muili Oluwole Oladejo",
+    description:
+      "One of Ibadan's most storied compounds, situated in the heart of Agbeni — bounded by Agbegun Compound to the North, the Gege River to the South, Agbeni-Oritamerin Road to the East, and Ile-Oye, Olukotun and Abose Compounds to the West. Founded by Agbon, an astute warrior, herbalist and defender of Ibadanland, who migrated from Ijabe in present-day Odo-Otin LGA, Osun State. Of his eighteen children across six wives, five survived to build the lineage: Faleke, Awinju, Tijani Atitebi, Omodele and Olaolu. The compound's name derives from the Labu-designed Adire cloth that Agbon's wives were celebrated for producing and trading.",
+    heritage: "Founded by the warrior-herbalist Agbon from Ijabe, Osun State; custodians of the Adire-Labu weaving and trading tradition.",
+  },
 ];
 
 const historicQuarters = [

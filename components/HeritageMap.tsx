@@ -179,6 +179,19 @@ const mapCompounds: MapCompoundNode[] = [
     desc: "Founded by Pa Egunjenmi from Abejide Compound, Oyo Town on land granted by Aare Latosa. Illustrious lineage that produced Chief A.M.A. Akinloye and Chief Mrs. Gladys Aduke Vaughan.",
     image: "/images/mogaji-adekunle-amidu-busari.jpg",
   },
+  {
+    id: "agbon-onilabu",
+    name: "Agbon Onilabu Compound",
+    yoruba: "Agbo Ilé Agbon Onilabu",
+    quarter: "Bere",
+    location: "Agbeni, Central Ibadan",
+    mogaji: "Mogaji Muili Oluwole Oladejo",
+    era: "19th Century Heritage (Ijabe / Osun State Origin)",
+    x: 48,
+    y: 38,
+    desc: "Home of warriors, herbalists and Adire traders. Founded by Agbon from Ijabe, Osun State. His wives' Labu-designed Adire cloth trade gave the compound its name — Agbon Onilabu.",
+    image: "/images/mogaji-muili-oluwole-oladejo.jpg",
+  },
 ];
 
 const quartersList = [

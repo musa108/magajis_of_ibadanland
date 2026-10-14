@@ -290,6 +290,48 @@ const lineageTrees: Record<string, LineageTreeData> = {
       ],
     },
   },
+
+  "agbon-onilabu": {
+    mogajiId: "agbon-onilabu",
+    familyName: "Agbon Onilabu Family Lineage",
+    compoundName: "Agbon Onilabu Compound (Agbeni, Ibadan)",
+    yoruba: "Ìdílé Agbo Ilé Agbon Onilabu",
+    root: {
+      id: "agbon-gen1",
+      name: "Agbon",
+      title: "Founding Patriarch — Warrior, Herbalist & Defender of Ibadan Land",
+      generation: "1st Generation",
+      era: "19th Century (Migration from Ijabe, Osun State)",
+      role: "Compound Founder, Warrior & Herbalist",
+      status: "Lineage Founder",
+      bio: "Agbon migrated with his wives and children from Ijabe, an ancient town in present-day Odo-Otin Local Government Area, Osun State. An astute warrior, strong herbalist and defender of Ibadanland, he was blessed with six wives and eighteen children. Due to incessant infant mortality (Àbíkú), only five survived: Faleke, Awinju, Tijani Atitebi, Omodele and Olaolu. His wives were also renowned Adire cloth traders — producers of the Labu-designed textile from which the compound takes its name.",
+      children: [
+        {
+          id: "agbon-gen2",
+          name: "Faleke, Awinju, Tijani Atitebi, Omodele & Olaolu",
+          title: "Second Generation — Founders of the Compound Branches",
+          generation: "2nd Generation",
+          era: "Late 19th – Early 20th Century",
+          role: "Branch Founders & Lineage Bearers",
+          status: "Lineage Elder",
+          bio: "From Agbon's five surviving children — Faleke, Awinju, Tijani Atitebi, Omodele and Olaolu — the compound expanded into many branches that continue to occupy the Agbon Onilabu ancestral home today. Beyond war and herbalism, the family cultivated cocoa and traded across Ibadan.",
+          children: [
+            {
+              id: "agbon-gen3",
+              name: "Mogaji Muili Oluwole Oladejo",
+              title: "Mogaji of Agbon Onilabu Compound",
+              generation: "Incumbent Mogaji",
+              era: "Present",
+              role: "Incumbent Mogaji & Cultural Custodian",
+              status: "Incumbent Mogaji",
+              bio: "Mogaji Muili Oluwole Oladejo serves as the custodian of Agbon Onilabu Compound, preserving the warrior, herbalist and Adire-trading legacy of the founding patriarch Agbon. Located in the heart of Agbeni, the compound remains a living testament to Ibadan's rich cultural and military history.",
+              image: "/images/mogaji-muili-oluwole-oladejo.jpg",
+            },
+          ],
+        },
+      ],
+    },
+  },
 };
 
 export default function LineageTree({
