@@ -192,6 +192,19 @@ const mapCompounds: MapCompoundNode[] = [
     desc: "Home of warriors, herbalists and Adire traders. Founded by Agbon from Ijabe, Osun State. His wives' Labu-designed Adire cloth trade gave the compound its name — Agbon Onilabu.",
     image: "/images/mogaji-muili-oluwole-oladejo.jpg",
   },
+  {
+    id: "abinuworo",
+    name: "Abinuworo Compound",
+    yoruba: "Agbo Ilé Abinuworo",
+    quarter: "Bere",
+    location: "Ayeye, Ibadan North-West LGA, Ibadan",
+    mogaji: "Alhaji (Oloye) Hammed Yaqub Adio",
+    era: "19th Century Ibadan Warrior Founding Era",
+    x: 38,
+    y: 30,
+    desc: "A proud dynasty rooted in Ibadan's warrior founding era. Abinuworo Compound in Ayeye has produced leaders across governance, commerce and cultural preservation across successive generations.",
+    image: "/images/mogaji-hammed-yaqub-adio.jpg",
+  },
 ];
 
 const quartersList = [

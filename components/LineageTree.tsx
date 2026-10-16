@@ -332,6 +332,48 @@ const lineageTrees: Record<string, LineageTreeData> = {
       ],
     },
   },
+
+  abinuworo: {
+    mogajiId: "abinuworo",
+    familyName: "Abinuworo Family Lineage",
+    compoundName: "Abinuworo Compound (Ayeye, Ibadan North-West)",
+    yoruba: "Ìdílé Agbo Ilé Abinuworo",
+    root: {
+      id: "abinuworo-gen1",
+      name: "Abinuworo (Founding Patriarch)",
+      title: "Warrior Patriarch — Ibadan Founding Era",
+      generation: "1st Generation",
+      era: "19th Century Ibadan Warrior Founding Era",
+      role: "Compound Founder & Warrior",
+      status: "Lineage Founder",
+      bio: "The Abinuworo dynasty is rooted in Ibadan's warrior founding era. The founding patriarch established the compound in Ayeye, which has since grown into a lineage that contributed to governance, commerce, and cultural preservation across Ibadan and its environs across successive generations.",
+      children: [
+        {
+          id: "abinuworo-gen2",
+          name: "Abinuworo Lineage Elders",
+          title: "Custodians of Governance, Commerce & Cultural Heritage",
+          generation: "Successive Generations",
+          era: "19th – 20th Century",
+          role: "Community Leaders & Heritage Custodians",
+          status: "Lineage Elder",
+          bio: "Across successive generations, Abinuworo Compound has produced leaders who contributed to governance, commerce, and cultural preservation across Ibadan and its environs — embodying the character of Ayeye as a quarter of purposeful, grounded Ibadan families.",
+          children: [
+            {
+              id: "abinuworo-gen3",
+              name: "Alhaji (Oloye) Hammed Yaqub Adio",
+              title: "Mogaji of Abinuworo Compound",
+              generation: "Incumbent Mogaji",
+              era: "2022 – Present",
+              role: "Incumbent Mogaji & Custodian of Abinuworo Dynasty",
+              status: "Incumbent Mogaji",
+              bio: "Installed by the Olubadan-in-Council in 2022. A thorough-bred Ibadan man — businessman in real estate, cattle ranching and livestock; seasoned traveller; dual Western and Arabic education; and a passionate custodian of Ibadan cultural heritage.",
+              image: "/images/mogaji-hammed-yaqub-adio.jpg",
+            },
+          ],
+        },
+      ],
+    },
+  },
 };
 
 export default function LineageTree({

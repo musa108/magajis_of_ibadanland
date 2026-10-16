@@ -151,6 +151,17 @@ const compounds = [
       "One of Ibadan's most storied compounds, situated in the heart of Agbeni — bounded by Agbegun Compound to the North, the Gege River to the South, Agbeni-Oritamerin Road to the East, and Ile-Oye, Olukotun and Abose Compounds to the West. Founded by Agbon, an astute warrior, herbalist and defender of Ibadanland, who migrated from Ijabe in present-day Odo-Otin LGA, Osun State. Of his eighteen children across six wives, five survived to build the lineage: Faleke, Awinju, Tijani Atitebi, Omodele and Olaolu. The compound's name derives from the Labu-designed Adire cloth that Agbon's wives were celebrated for producing and trading.",
     heritage: "Founded by the warrior-herbalist Agbon from Ijabe, Osun State; custodians of the Adire-Labu weaving and trading tradition.",
   },
+  {
+    id: "abinuworo",
+    name: "Abinuworo Compound",
+    yoruba: "Agbo Ilé Abinuworo",
+    location: "Ayeye, Ibadan North-West Local Government, Ibadan",
+    quarter: "Ayeye / Ibadan North-West",
+    mogaji: "Alhaji (Oloye) Hammed Yaqub Adio",
+    description:
+      "A proud lineage rooted in Ibadan's warrior founding era, situated in Ayeye, Ibadan North-West Local Government. Abinuworo Compound has produced leaders who contributed to governance, commerce and cultural preservation across Ibadan and its environs across successive generations. The incumbent Mogaji — installed by the Olubadan-in-Council in 2022 — serves as the principal representative of His Imperial Majesty to the family, community and its environs, mediating disputes and safeguarding ancestral heritage.",
+    heritage: "Rooted in Ibadan's warrior founding era; a compound of governance, commerce and enduring cultural preservation in the heart of Ayeye.",
+  },
 ];
 
 const historicQuarters = [
