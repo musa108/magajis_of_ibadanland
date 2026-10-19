@@ -162,6 +162,17 @@ const compounds = [
       "A proud lineage rooted in Ibadan's warrior founding era, situated in Ayeye, Ibadan North-West Local Government. Abinuworo Compound has produced leaders who contributed to governance, commerce and cultural preservation across Ibadan and its environs across successive generations. The incumbent Mogaji — installed by the Olubadan-in-Council in 2022 — serves as the principal representative of His Imperial Majesty to the family, community and its environs, mediating disputes and safeguarding ancestral heritage.",
     heritage: "Rooted in Ibadan's warrior founding era; a compound of governance, commerce and enduring cultural preservation in the heart of Ayeye.",
   },
+  {
+    id: "ifalohun-ogunsonso",
+    name: "Ifalohun Ogunsonso Compound",
+    yoruba: "Agbo Ilé Ifalohun Ogunsonso",
+    location: "Oke Ibikunle Idi-Ikan, Ibadan",
+    quarter: "Oke Ibikunle / Idi-Ikan",
+    mogaji: "Chief Akanji Muhammed Taoheed",
+    description:
+      "Set within Oke-Ibikunle Idi-Ikan, Ifalohun Ogunsonso Compound carries a lineage that traces its origins to Ijado in Ogbomoso, within Aresa land. The founding ancestor was both a warrior — standing shoulder to shoulder with one of Ibadan's greatest warlords in numerous historic battles — and a spiritual pioneer, counted among the very first worshippers of Sàngó in the entire city. That remarkable pairing of martial courage and devotional heritage has shaped the compound's identity for generations. Mogaji Chief Akanji Muhammed Taoheed was installed on 12th July 2021.",
+    heritage: "Among the first Sàngó worshippers in Ibadan; a warrior-spiritual lineage tracing origins to Ijado, Ogbomoso (Aresa land).",
+  },
 ];
 
 const historicQuarters = [

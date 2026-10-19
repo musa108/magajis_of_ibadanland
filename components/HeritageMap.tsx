@@ -205,6 +205,19 @@ const mapCompounds: MapCompoundNode[] = [
     desc: "A proud dynasty rooted in Ibadan's warrior founding era. Abinuworo Compound in Ayeye has produced leaders across governance, commerce and cultural preservation across successive generations.",
     image: "/images/mogaji-hammed-yaqub-adio.jpg",
   },
+  {
+    id: "ifalohun-ogunsonso",
+    name: "Ifalohun Ogunsonso Compound",
+    yoruba: "Agbo Ilé Ifalohun Ogunsonso",
+    quarter: "Mapo / Central",
+    location: "Oke Ibikunle Idi-Ikan, Ibadan",
+    mogaji: "Chief Akanji Muhammed Taoheed",
+    era: "19th Century Warrior & Sàngó Heritage (Aresa / Ogbomoso Origin)",
+    x: 44,
+    y: 52,
+    desc: "Home of warriors and among the very first worshippers of Sàngó in Ibadan. Lineage traces to Ijado, Ogbomoso (Aresa land). Installed Mogaji 12th July 2021.",
+    image: "/images/mogaji-akanji-muhammed-taoheed.jpg",
+  },
 ];
 
 const quartersList = [

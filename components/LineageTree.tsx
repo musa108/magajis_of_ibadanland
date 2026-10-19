@@ -374,6 +374,48 @@ const lineageTrees: Record<string, LineageTreeData> = {
       ],
     },
   },
+
+  "ifalohun-ogunsonso": {
+    mogajiId: "ifalohun-ogunsonso",
+    familyName: "Ifalohun Ogunsonso Family Lineage",
+    compoundName: "Ifalohun Ogunsonso Compound (Oke Ibikunle Idi-Ikan, Ibadan)",
+    yoruba: "Ìdílé Agbo Ilé Ifalohun Ogunsonso",
+    root: {
+      id: "ogunsonso-gen1",
+      name: "Ogunsonso (Founding Patriarch)",
+      title: "Warrior & Among the First Worshippers of Sàngó in Ibadan",
+      generation: "1st Generation",
+      era: "19th Century (Origin: Ijado, Ogbomoso — Aresa Land)",
+      role: "Compound Founder, Warrior & Spiritual Custodian",
+      status: "Lineage Founder",
+      bio: "The founding ancestor of Ifalohun Ogunsonso Compound traced his origins to Ijado in Ogbomoso, within Aresa land. He stood shoulder to shoulder with one of Ibadan's greatest warlords in numerous historic battles, and was simultaneously among the very first worshippers of Sàngó in the entire city. This pairing of martial courage and spiritual devotion has defined the compound's identity for generations.",
+      children: [
+        {
+          id: "ogunsonso-gen2",
+          name: "Ogunsonso Lineage Elders",
+          title: "Custodians of Warrior Spirit & Sàngó Devotion",
+          generation: "Successive Generations",
+          era: "19th – 20th Century",
+          role: "Lineage Bearers & Heritage Custodians",
+          status: "Lineage Elder",
+          bio: "Across successive generations, the lineage of Ifalohun Ogunsonso Compound has carried both its warrior heritage and its deep Sàngó devotional traditions with pride — preserving the twin pillars laid by the founding patriarch in Oke Ibikunle Idi-Ikan.",
+          children: [
+            {
+              id: "ogunsonso-gen3",
+              name: "Chief Akanji Muhammed Taoheed",
+              title: "Mogaji of Ifalohun Ogunsonso Compound",
+              generation: "Incumbent Mogaji",
+              era: "July 2021 – Present",
+              role: "Incumbent Mogaji & Heritage Custodian",
+              status: "Incumbent Mogaji",
+              bio: "Installed on 12th July 2021. Under his custodianship, Ifalohun Ogunsonso Compound continues its proud lineage of warrior spirit and Sàngó devotion — preserving ancestral memory while working toward the unity and progress of the compound and its community in Oke Ibikunle Idi-Ikan.",
+              image: "/images/mogaji-akanji-muhammed-taoheed.jpg",
+            },
+          ],
+        },
+      ],
+    },
+  },
 };
 
 export default function LineageTree({
