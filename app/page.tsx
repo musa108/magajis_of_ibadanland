@@ -4,6 +4,7 @@ import HeritageIntro from "@/components/Homepage/HeritageIntro";
 import FeaturedMagajis from "@/components/Homepage/FeaturedMagajis";
 import CompoundsPreview from "@/components/Homepage/CompoundsPreview";
 import IleEkePreview from "@/components/Homepage/IleEkePreview";
+import OlubadanVisit from "@/components/Homepage/OlubadanVisit";
 import HeritageTimeline from "@/components/Homepage/HeritageTimeline";
 import StoriesPreview from "@/components/Homepage/StoriesPreview";
 import FinalCTA from "@/components/Homepage/FinalCTA";
@@ -23,6 +24,8 @@ export default function Home() {
       <CompoundsPreview />
 
       <IleEkePreview />
+
+      <OlubadanVisit />
 
       <HeritageTimeline />
 

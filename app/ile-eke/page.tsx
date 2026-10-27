@@ -17,6 +17,8 @@ import {
   Sparkles,
   Eye,
   History,
+  Crown,
+  Calendar,
 } from "lucide-react";
 import { fadeUp, fadeIn, viewportOnce } from "@/lib/animations";
 
@@ -84,6 +86,24 @@ const constructionPhases = [
 
 const galleryImages = [
   {
+    id: "royal-visit-1",
+    title: "Royal Inspection · Processional Arrival",
+    subtitle: "26 October 2026 · Kabiyesi Olubadan of Ibadan",
+    src: "/images/olubadan-ile-eke-visit-1.jpg",
+    type: "Present",
+    badge: "Royal Inspection",
+    desc: "Kabiyesi Olubadan of Ibadan, Oba Adewolu Ladoja (Arusa I) arriving under the royal umbrella to inspect the completed hall ahead of its official commissioning.",
+  },
+  {
+    id: "royal-visit-2",
+    title: "Reception by the Council of Mogajis",
+    subtitle: "26 October 2026 · Assembly Forecourt",
+    src: "/images/olubadan-ile-eke-visit-2.jpg",
+    type: "Present",
+    badge: "Royal Inspection",
+    desc: "His Imperial Majesty received in grand audience by the Mogajis of Ibadanland at the forecourt entrance of Gbọngan Mogaji Ilé Ẹ̀kẹ́.",
+  },
+  {
     id: "present-front",
     title: "Ceremonial Portico & Facade",
     subtitle: "Present Condition · Front Entrance",
@@ -138,210 +158,271 @@ export default function IleEkePage() {
           </div>
 
           <div className="max-w-[950px]">
-            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.02] tracking-[-0.035em] text-[#f4f0e7]">
-              Ilé Ẹ̀kẹ́ <span className="italic text-[#d4b56e]">Projects.</span>
+            <h1 className="font-display text-[clamp(2.8rem,6vw,5.5rem)] font-normal leading-[1.02] tracking-[-0.035em] text-[#f4f0e7]">
+              Gbọ̀ngàn Mògájì
+              <br />
+              <span className="italic text-[#d4b56e]">Ilé Ẹ̀kẹ́ Complex.</span>
             </h1>
+
+            <p className="mt-8 text-lg sm:text-xl text-[#f4f0e7]/85 font-sans leading-relaxed max-w-3xl">
+              The grand parliamentary hall, arbitration chambers, and lineage archive of the{" "}
+              <span className="text-white font-medium">Association of Mogajis of Ibadanland</span>. A living monument to traditional governance, communal unity, and Ibadan&apos;s enduring heritage.
+            </p>
           </div>
 
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-[#f4f0e7]/85 sm:text-lg sm:leading-8 border-l-2 border-[#b89a5a] pl-6 font-sans">
-            The historical assembly hall and modern traditional secretariat of the <span className="text-white font-medium">Association of Mogajis of Ibadanland</span> — an architectural landmark bridging centuries of lineage heritage with the future of civic leadership.
-          </p>
-
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#gallery-transformation"
-              className="inline-flex items-center gap-3 border border-[#b89a5a] bg-[#b89a5a] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.18em] text-[#07111f] transition hover:bg-[#d4b56e]"
-            >
-              <Eye size={14} /> View Present Condition & Gallery <ChevronRight size={13} />
-            </a>
-            <a
-              href="#progress-update"
-              className="inline-flex items-center gap-3 border border-white/30 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#f4f0e7] transition hover:border-[#b89a5a] hover:text-[#d4b56e]"
-            >
-              <History size={14} /> Construction Journey
-            </a>
+          <div className="mt-12 flex flex-wrap items-center gap-6 border-t border-white/10 pt-8 text-xs text-[#aaa397]">
+            <div className="flex items-center gap-2">
+              <MapPin size={14} className="text-[#b89a5a]" />
+              <span>Location: Ibadanland, Oyo State</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 size={14} className="text-[#d4b56e]" />
+              <span className="text-[#f4f0e7]">Status: Exterior Completed · Final Commissioning Stage</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          PRESENT CONDITION & TRANSFORMATION SPOTLIGHT
+          SPECIAL SECTION: ROYAL INSPECTION VISIT BY OLUBADAN
       ========================================================= */}
-      <section id="gallery-transformation" className="py-24 px-6 lg:px-12 bg-[#050c17] border-b border-white/10">
+      <section id="royal-visit" className="py-24 px-6 lg:px-12 bg-[#091424] border-b border-[#b89a5a]/25 text-[#f4f0e7]">
         <div className="mx-auto max-w-[1360px]">
-          {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-white/15 pb-6">
-            <div>
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#d4b56e] mb-2">
-                <Sparkles size={14} />
-                <span>ÌKỌ́LÉ LỌ́WỌ́LỌ́WỌ́ · BUILDING CONDITION & TRANSFORMATION</span>
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#b89a5a]/25 pb-6 mb-12">
+            <div className="flex items-center gap-3">
+              <span className="h-[1px] w-8 bg-[#b89a5a]" />
+              <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.24em] text-[#d4b56e]">
+                ÌBẸ̀WÒ ỌBA · ROYAL VISIT & OFFICIAL INSPECTION
+              </p>
+            </div>
+            <div className="flex items-center gap-2 text-xs font-medium text-[#aaa397]">
+              <Calendar size={13} className="text-[#b89a5a]" />
+              <span>October 26, 2026 · Ibadanland</span>
+            </div>
+          </div>
+
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              className="lg:col-span-6"
+            >
+              <div className="inline-flex items-center gap-2 border border-[#b89a5a]/40 bg-[#07111f] px-3.5 py-1 mb-5">
+                <Crown size={14} className="text-[#d4b56e]" />
+                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#d4b56e]">
+                  Imperial Seal of Approval
+                </span>
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#f4f0e7]">
-                Present Condition: Gbọ̀ngàn Mògájì
+
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[#f4f0e7] leading-[1.1]">
+                Kabiyesi Olubadan of Ibadan,
+                <br />
+                <span className="italic text-[#d4b56e]">
+                  Oba Adewolu Ladoja (Arusa I)
+                </span>
+                <br />
+                Inspects Gbọ̀ngàn Mògájì.
+              </h2>
+
+              <p className="mt-6 text-base sm:text-lg leading-relaxed text-[#f4f0e7]/85 font-sans">
+                In preparation for the historic commissioning of <strong className="text-white font-medium">Gbọ̀ngàn Mògájì Ilé Ẹ̀kẹ́</strong> (Mogaji&apos;s Hall), His Imperial Majesty <span className="text-[#d4b56e] font-semibold">Oba Adewolu Ladoja (Arusa I)</span>, Kabiyesi Olubadan of Ibadan, visited the assembly hall on <strong>October 26, 2026</strong>.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-[#aaa397] font-sans">
+                Kabiyesi was warmly received with grand pomp, traditional reverence, and royal dignity by the Mogajis of Ibadanland, chieftains, and elders of the Association. His Imperial Majesty walked the grounds, inspected the completed classical portico and chambers, and bestowed his royal blessings upon the landmark assembly project.
+              </p>
+
+              <div className="mt-8 border-l-2 border-[#b89a5a] bg-[#07111f] p-5">
+                <p className="font-display italic text-base text-[#f4f0e7]/90 leading-relaxed">
+                  &ldquo;This hall stands as a monument to the unity and enduring strength of Ibadan&apos;s family compounds. We look forward to its grand commissioning for the benefit of all our people.&rdquo;
+                </p>
+                <span className="mt-2 block text-[11px] font-semibold uppercase tracking-widest text-[#d4b56e]">
+                  — Royal Declaration of Visitation
+                </span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              className="lg:col-span-6 grid gap-4 sm:grid-cols-2"
+            >
+              <div className="relative aspect-[4/5] overflow-hidden border border-[#b89a5a]/40 bg-[#07111f] group">
+                <Image
+                  src="/images/olubadan-ile-eke-visit-1.jpg"
+                  alt="Kabiyesi Olubadan Oba Adewolu Ladoja (Arusa I) arriving at Gbọngan Mogaji Ilé Ẹ̀kẹ́"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 30vw"
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07111f] via-transparent to-transparent opacity-85" />
+                <div className="absolute bottom-3 left-3 right-3 text-left">
+                  <span className="border border-[#b89a5a]/60 bg-[#07111f]/90 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-[#d4b56e] backdrop-blur-sm">
+                    Arrival
+                  </span>
+                  <p className="mt-1 text-xs text-white/90 font-medium">
+                    Kabiyesi under royal parasol
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative aspect-[4/5] overflow-hidden border border-[#b89a5a]/40 bg-[#07111f] group">
+                <Image
+                  src="/images/olubadan-ile-eke-visit-2.jpg"
+                  alt="Council of Mogajis receiving Kabiyesi Olubadan at Ilé Ẹ̀kẹ́ forecourt"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 30vw"
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07111f] via-transparent to-transparent opacity-85" />
+                <div className="absolute bottom-3 left-3 right-3 text-left">
+                  <span className="border border-[#b89a5a]/60 bg-[#07111f]/90 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-[#d4b56e] backdrop-blur-sm">
+                    Reception
+                  </span>
+                  <p className="mt-1 text-xs text-white/90 font-medium">
+                    With Council of Mogajis
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          INTERACTIVE PHOTO GALLERY & ARCHITECTURAL DOCUMENTATION
+      ========================================================= */}
+      <section className="py-24 px-6 lg:px-12 bg-[#07111f] border-b border-[#b89a5a]/20">
+        <div className="mx-auto max-w-[1360px]">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b border-white/10 pb-8 mb-12">
+            <div>
+              <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#b89a5a]">
+                ÀKỌ́Ọ́LẸ̀ ÀWÒRÁN · VISUAL DOCUMENTARY ARCHIVE
+              </span>
+              <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl text-[#f4f0e7]">
+                Architectural Records
               </h2>
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex items-center gap-2 border border-white/15 bg-[#0b1627] p-1">
+            <div className="mt-6 flex flex-wrap items-center gap-2">
               {(["All", "Present", "Before"] as const).map((tab) => (
                 <button
                   key={tab}
-                  type="button"
                   onClick={() => setFilter(tab)}
-                  className={`px-4 py-1.5 text-xs font-semibold uppercase tracking-wider transition-all ${
+                  className={`px-4 py-2 text-xs font-semibold uppercase tracking-widest transition cursor-pointer ${
                     filter === tab
-                      ? "bg-[#b89a5a] text-[#07111f]"
-                      : "text-[#aaa397] hover:text-white"
+                      ? "border border-[#b89a5a] bg-[#b89a5a] text-[#07111f]"
+                      : "border border-white/20 bg-transparent text-[#aaa397] hover:border-white hover:text-white"
                   }`}
                 >
-                  {tab === "Present"
-                    ? "Present Condition"
-                    : tab === "Before"
-                    ? "Before / Construction"
-                    : "All Views"}
+                  {tab === "All" ? "All Photographs" : tab === "Present" ? "Present Condition" : "Construction Phase"}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Main Featured Photo & Interactive Details */}
-          <div className="grid gap-10 lg:grid-cols-[1.3fr_0.7fr] items-start">
-            {/* Active Highlight Image */}
+          {/* Primary Featured Image Display */}
+          <div className="grid gap-8 lg:grid-cols-12 items-start">
             <motion.div
               key={selectedImage.id}
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-              className="group border border-[#b89a5a]/30 bg-[#0b1627] flex flex-col justify-between"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+              className="relative overflow-hidden border border-[#b89a5a]/30 bg-[#0b1627] lg:col-span-8"
             >
-              <div className="relative aspect-[16/11] w-full overflow-hidden bg-[#07111f]">
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#07111f]">
                 <Image
                   src={selectedImage.src}
                   alt={selectedImage.title}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 65vw"
+                  className="object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b1627] via-transparent to-transparent opacity-80" />
-
-                {/* Top Badge */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-flex items-center gap-2 border border-[#b89a5a]/60 bg-[#07111f]/90 px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-[#d4b56e] backdrop-blur-sm">
-                    {selectedImage.type === "Present" ? (
-                      <CheckCircle2 size={13} className="text-[#d4b56e]" />
-                    ) : (
-                      <HardHat size={13} className="text-[#b89a5a]" />
-                    )}
+                <div className="absolute top-4 left-4 border border-[#b89a5a]/60 bg-[#07111f]/90 px-3.5 py-1 backdrop-blur-md">
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-[#d4b56e]">
                     {selectedImage.badge}
                   </span>
                 </div>
               </div>
 
-              {/* Photo Description Box */}
-              <div className="p-7 sm:p-9 border-t border-white/10">
-                <span className="text-[10px] font-sans font-semibold uppercase tracking-widest text-[#b89a5a] block">
+              <div className="p-6 sm:p-8 border-t border-white/10">
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-[#b89a5a] block">
                   {selectedImage.subtitle}
                 </span>
                 <h3 className="mt-1 font-display text-2xl sm:text-3xl text-white">
                   {selectedImage.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#f4f0e7]/80 font-sans">
+                <p className="mt-3 text-sm leading-relaxed text-[#f4f0e7]/75 font-sans">
                   {selectedImage.desc}
                 </p>
               </div>
             </motion.div>
 
-            {/* Thumbnail Selectors & Quick Project Facts */}
-            <div className="flex flex-col justify-between gap-6">
-              <div className="space-y-4">
-                <p className="text-[10px] font-sans font-semibold uppercase tracking-[0.2em] text-[#b89a5a]">
-                  Select Image to Inspect:
-                </p>
-
-                {filteredImages.map((img) => (
-                  <button
-                    key={img.id}
-                    type="button"
-                    onClick={() => setSelectedImage(img)}
-                    className={`w-full text-left border p-3.5 transition-all flex items-center gap-4 ${
-                      selectedImage.id === img.id
-                        ? "border-[#b89a5a] bg-[#0f1e35]"
-                        : "border-white/10 bg-[#0b1627] hover:border-white/25"
-                    }`}
-                  >
-                    <div className="relative h-16 w-20 shrink-0 overflow-hidden bg-[#07111f]">
-                      <Image
-                        src={img.src}
-                        alt={img.title}
-                        fill
-                        sizes="80px"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2">
-                        <span className="text-[9px] font-semibold uppercase tracking-wider text-[#d4b56e]">
-                          {img.type}
-                        </span>
-                        <span className="text-[11px] text-[#aaa397] truncate">
-                          {img.subtitle}
-                        </span>
-                      </div>
-                      <p className="font-display text-base text-white mt-1 truncate">
-                        {img.title}
-                      </p>
-                    </div>
-                  </button>
-                ))}
-              </div>
-
-              {/* Quick Info Card */}
-              <div className="border border-[#b89a5a]/30 bg-[#0b1627] p-6">
-                <span className="text-[10px] font-sans font-semibold uppercase tracking-widest text-[#b89a5a] block">
-                  Architectural Summary
-                </span>
-                <div className="mt-4 space-y-3 text-xs text-[#aaa397] font-sans">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                    <span className="flex items-center gap-1.5"><MapPin size={12} className="text-[#b89a5a]" /> Location</span>
-                    <span className="text-white font-medium">Ibadan Central, Oyo State</span>
+            {/* Thumbnails Sidebar */}
+            <div className="lg:col-span-4 flex flex-col gap-4">
+              <span className="text-xs uppercase font-semibold tracking-widest text-[#aaa397] block mb-2">
+                Select Photo Angle ({filteredImages.length})
+              </span>
+              {filteredImages.map((img) => (
+                <button
+                  key={img.id}
+                  onClick={() => setSelectedImage(img)}
+                  className={`group relative overflow-hidden border p-3 text-left transition cursor-pointer flex items-center gap-4 ${
+                    selectedImage.id === img.id
+                      ? "border-[#b89a5a] bg-[#0b1627]"
+                      : "border-white/10 bg-[#07111f] hover:border-white/30"
+                  }`}
+                >
+                  <div className="relative h-16 w-24 shrink-0 overflow-hidden bg-[#07111f]">
+                    <Image
+                      src={img.src}
+                      alt={img.title}
+                      fill
+                      sizes="96px"
+                      className="object-cover object-center"
+                    />
                   </div>
-                  <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                    <span className="flex items-center gap-1.5"><Landmark size={12} className="text-[#b89a5a]" /> Capacity</span>
-                    <span className="text-white font-medium">1,500+ Seat Parliament</span>
+                  <div>
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#d4b56e] block">
+                      {img.badge}
+                    </span>
+                    <h4 className="font-display text-sm text-white group-hover:text-[#d4b56e] transition">
+                      {img.title}
+                    </h4>
+                    <p className="text-[11px] text-[#aaa397] mt-0.5 line-clamp-1">
+                      {img.subtitle}
+                    </p>
                   </div>
-                  <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                    <span className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#b89a5a]" /> Exterior Status</span>
-                    <span className="text-[#d4b56e] font-semibold">Completed & Portico Installed</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="flex items-center gap-1.5"><Shield size={12} className="text-[#b89a5a]" /> Inscription</span>
-                    <span className="text-[#d4b56e] font-medium">Gbọngan Mògájì Ilé Ẹ̀kẹ́</span>
-                  </div>
-                </div>
-              </div>
+                </button>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          FOUR CORE FACILITIES (CREAM FOLIO)
+          FOUR INSTITUTIONAL PILLARS
       ========================================================= */}
-      <section className="py-24 px-6 lg:px-12 bg-[#e8e0d0] text-[#101923]">
+      <section className="py-24 px-6 lg:px-12 bg-[#e8e0d0] text-[#101923] border-b border-[#b89a5a]/30">
         <div className="mx-auto max-w-[1360px]">
           <div className="mb-16 border-b border-[#101923]/15 pb-8">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#9a5b43]">
-              ÀWỌN IBI ÀṢÀ · CIVIC FACILITIES
+            <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.22em] text-[#9a5b43]">
+              ÈRÒDÍ ÀTI ÈTÒ · INSTITUTIONAL PURPOSE & PILLARS
             </span>
-            <h2 className="mt-2 font-display text-4xl sm:text-5xl lg:text-6xl text-[#101923]">
-              Pillars of the New Hall.
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl text-[#101923]">
+              Four Pillars of Ilé Ẹ̀kẹ́
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#1e242d]/80 font-sans sm:text-lg">
-              Ilé Ẹ̀kẹ́ is built to serve as a comprehensive traditional civic complex preserving culture while empowering compound governance.
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[#1e242d]/80 font-sans">
+              Gbọngan Mogaji is designed not merely as an architectural monument, but as the active legislative, judicial, and archival hearth for Ibadan&apos;s traditional council.
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {projectPillars.map((pillar) => {
               const Icon = pillar.icon;
               return (
