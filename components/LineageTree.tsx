@@ -416,6 +416,48 @@ const lineageTrees: Record<string, LineageTreeData> = {
       ],
     },
   },
+
+  "agbede-adodo": {
+    mogajiId: "agbede-adodo",
+    familyName: "Agbede Adodo Family Lineage",
+    compoundName: "Agbede Adodo Compound (Ward 2, Ibadan North-West)",
+    yoruba: "Ìdílé Àgbẹ̀dẹ Àdódo · Àwọn Aṣáájú Alágbẹ̀dẹ",
+    root: {
+      id: "agbede-gen1",
+      name: "Baale Agbede Adodo (Founding Patriarch)",
+      title: "The Originator · Head of Blacksmiths of Early Ibadan",
+      generation: "1st Generation",
+      era: "Early 19th Century (Warlord Era)",
+      role: "Compound Founder, Master Metallurgist & High Chief",
+      status: "Lineage Founder",
+      bio: "Founding patriarch of Agbede Adodo, establishing the city's premier and most ancient blacksmith hearth in Ward 2. Revered as the 'Originators,' the workshop served as the technological and spiritual engine room of early Ibadan, handcrafting the legendary Agada swords, spears, and arrowheads for Balogun Ibikunle and Basorun Ogunmola, while maintaining the sacred hearth and consecration rites of Ogun.",
+      children: [
+        {
+          id: "agbede-gen2",
+          name: "Agbede Adodo Master Smiths & Gunsmith Elders",
+          title: "Custodians of Military Metallurgy & Dane Gun Maintenance",
+          generation: "Successive Generations",
+          era: "19th – 20th Century (Kiriji War Era)",
+          role: "Military Armaments Masters & Agricultural Providers",
+          status: "Lineage Elder",
+          bio: "Pioneered the maintenance and repair of imported firearms, casting indigenous lead bullets that gave Ibadan decisive tactical advantages during the Kiriji War. Concurrently forged the agricultural cutlasses and hoes essential to feed the city's armies and growing populations, while serving as a strategic war council hub where military commanders converged.",
+          children: [
+            {
+              id: "agbede-gen3",
+              name: "Chief Samsudeen Akinkunmi Ramoni",
+              title: "Mogaji of Agbede Adodo Compound",
+              generation: "Incumbent Mogaji",
+              era: "Present Era",
+              role: "Incumbent Mogaji & Custodian of Ancient Blacksmith Lineage",
+              status: "Incumbent Mogaji",
+              bio: "Installed as Mogaji and custodian of the Agbede Adodo dynasty in Ward 2, Ibadan North-West. He preserves the glorious legacy of Ibadan's premier forge — upholding its historic role as the technological foundation, agricultural backbone, and spiritual sanctuary of early Ibadanland.",
+              image: "/images/mogaji-agbede-adodo.jpg",
+            },
+          ],
+        },
+      ],
+    },
+  },
 };
 
 export default function LineageTree({

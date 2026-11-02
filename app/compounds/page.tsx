@@ -173,6 +173,17 @@ const compounds = [
       "Set within Oke-Ibikunle Idi-Ikan, Ifalohun Ogunsonso Compound carries a lineage that traces its origins to Ijado in Ogbomoso, within Aresa land. The founding ancestor was both a warrior — standing shoulder to shoulder with one of Ibadan's greatest warlords in numerous historic battles — and a spiritual pioneer, counted among the very first worshippers of Sàngó in the entire city. That remarkable pairing of martial courage and devotional heritage has shaped the compound's identity for generations. Mogaji Chief Akanji Muhammed Taoheed was installed on 12th July 2021.",
     heritage: "Among the first Sàngó worshippers in Ibadan; a warrior-spiritual lineage tracing origins to Ijado, Ogbomoso (Aresa land).",
   },
+  {
+    id: "agbede-adodo",
+    name: "Agbede Adodo Compound",
+    yoruba: "Agbo Ilé Àgbẹ̀dẹ Àdódo",
+    location: "Ward 2, Ibadan North-West Local Government, Ibadan",
+    quarter: "Ward 2 / Ibadan North-West",
+    mogaji: "Chief Samsudeen Akinkunmi Ramoni",
+    description:
+      "Agbede Adodo represents the technological and spiritual engine room of early Ibadan. As the city's first and most ancient blacksmith workshop, it earned the title of 'the Originators'. In the 19th-century warlord era, the workshop was the primary forge for the Agada swords, spears, and arrowheads used by Balogun Ibikunle and Basorun Ogunmola. As gunpowder warfare arrived, it became Ibadan's military maintenance hub, repairing firearms and casting lead ammunition for the Kiriji War. Furthermore, it forged the essential farming tools that fed the city, served as a sacred Ogun sanctuary for weapon consecration, and functioned as a secret strategic council where war leaders gathered.",
+    heritage: "First and most ancient blacksmith workshop in Ibadan; weapon-forgers for Balogun Ibikunle and Basorun Ogunmola, and sacred spiritual engine room of early Ibadan.",
+  },
 ];
 
 const historicQuarters = [

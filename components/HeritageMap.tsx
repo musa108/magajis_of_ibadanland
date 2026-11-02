@@ -218,6 +218,19 @@ const mapCompounds: MapCompoundNode[] = [
     desc: "Home of warriors and among the very first worshippers of Sàngó in Ibadan. Lineage traces to Ijado, Ogbomoso (Aresa land). Installed Mogaji 12th July 2021.",
     image: "/images/mogaji-akanji-muhammed-taoheed.jpg",
   },
+  {
+    id: "agbede-adodo",
+    name: "Agbede Adodo Compound",
+    yoruba: "Agbo Ilé Àgbẹ̀dẹ Àdódo",
+    quarter: "Central / Aremo",
+    location: "Ward 2, Ibadan North-West LGA",
+    mogaji: "Chief Samsudeen Akinkunmi Ramoni",
+    era: "First & Most Ancient Blacksmith Workshop (19th Century Warlord Era)",
+    x: 36,
+    y: 34,
+    desc: "The technological and spiritual engine room of early Ibadan. Originators of metallurgy in Ibadan, weapon-forgers for Balogun Ibikunle and Basorun Ogunmola, firearm maintenance hub during the Kiriji War, and sacred sanctuary of Ogun.",
+    image: "/images/mogaji-agbede-adodo.jpg",
+  },
 ];
 
 const quartersList = [

@@ -20,6 +20,17 @@ const featuredStories = [
     tags: ["Origins", "Oyo Empire", "Warriors", "History"],
   },
   {
+    id: "agbede-adodo-engine-room",
+    category: "Àkọ́ọ́lẹ̀ Ìtàn · Metallurgy & War",
+    yorubaTitle: "Àgbẹ̀dẹ Àdódo — Ilé Ìrìn Àtijọ́",
+    title: "Agbede Adodo: The Technological and Spiritual Engine Room of Early Ibadan",
+    excerpt:
+      "Recognized as Ibadan's premier and most ancient blacksmith workshop in Ward 2, Agbede Adodo forged the fearsome Agada swords and spears for Balogun Ibikunle and Basorun Ogunmola, maintained firearms during the Kiriji War, fabricated the agricultural tools that fed armies and refugees, and consecrated Ibadan's arms at the sacred sanctuary of Ogun.",
+    date: "19th Century — Present",
+    readTime: "9 min read",
+    tags: ["Agbede Adodo", "Blacksmiths", "Ogun", "Military", "Kiriji War"],
+  },
+  {
     id: "olubadan-succession",
     category: "Ìjọba Ìbílẹ̀ · Chieftaincy",
     yorubaTitle: "Ìlànà Ìtẹ̀ Olúbàdàn",
