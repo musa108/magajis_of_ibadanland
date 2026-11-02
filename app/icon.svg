@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fae29c" />
+      <stop offset="45%" stop-color="#d4b56e" />
+      <stop offset="80%" stop-color="#b89a5a" />
+      <stop offset="100%" stop-color="#805d1d" />
+    </linearGradient>
+    <radialGradient id="navy" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#16263d" />
+      <stop offset="70%" stop-color="#0a1424" />
+      <stop offset="100%" stop-color="#040912" />
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Medallion -->
+  <circle cx="64" cy="64" r="60" fill="url(#navy)" stroke="url(#gold)" stroke-width="4" filter="url(#glow)"/>
+  <circle cx="64" cy="64" r="54" fill="none" stroke="url(#gold)" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.8"/>
+
+  <!-- Ade Olubadan (Royal Crown) -->
+  <g transform="translate(64, 38) scale(0.95)" filter="url(#glow)">
+    <path d="M -26,14 L -21,-12 L -9,0 L 0,-24 L 9,0 L 21,-12 L 26,14 Z" fill="url(#gold)" />
+    <!-- Crown Jewels / Royal Cowries / Pearls -->
+    <circle cx="0" cy="-24" r="3.2" fill="#ffffff" />
+    <circle cx="-21" cy="-12" r="2.8" fill="#ffffff" />
+    <circle cx="21" cy="-12" r="2.8" fill="#ffffff" />
+    <!-- Crown Base Velvet / Band -->
+    <rect x="-27" y="14" width="54" height="5" rx="2" fill="url(#gold)" />
+  </g>
+
+  <!-- Mapo Hall Columns Motif -->
+  <g transform="translate(64, 80) scale(0.9)" filter="url(#glow)">
+    <!-- Pediment -->
+    <polygon points="-36,-12 0,-24 36,-12" fill="url(#gold)" />
+    <rect x="-36" y="-11" width="72" height="3.5" fill="url(#gold)" />
+    <!-- 4 Pillars -->
+    <rect x="-30" y="-6" width="6.5" height="28" rx="1" fill="url(#gold)" />
+    <rect x="-12.5" y="-6" width="6.5" height="28" rx="1" fill="url(#gold)" />
+    <rect x="6" y="-6" width="6.5" height="28" rx="1" fill="url(#gold)" />
+    <rect x="23.5" y="-6" width="6.5" height="28" rx="1" fill="url(#gold)" />
+    <!-- Foundation Steps -->
+    <rect x="-36" y="22" width="72" height="3.5" fill="url(#gold)" />
+    <rect x="-40" y="25.5" width="80" height="4" rx="1" fill="url(#gold)" />
+  </g>
+
+  <!-- Royal Beaded Ilẹkẹ Arc -->
+  <path d="M 24,78 Q 64,122 104,78" fill="none" stroke="url(#gold)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 5" opacity="0.9" />
+</svg>
