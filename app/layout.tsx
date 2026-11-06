@@ -1,19 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Cinzel, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "600", "700", "800", "900"],
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700", "800"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -167,7 +175,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${cormorant.variable} ${manrope.variable} min-h-screen bg-[#07111f] text-[#f4f0e7] selection:bg-[#b89a5a] selection:text-[#07111f] antialiased`}
+        className={`${cinzel.variable} ${playfair.variable} ${jakarta.variable} min-h-screen bg-[#07111f] text-[#f4f0e7] selection:bg-[#b89a5a] selection:text-[#07111f] antialiased`}
       >
         {children}
       </body>
