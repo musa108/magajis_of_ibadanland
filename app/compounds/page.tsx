@@ -184,6 +184,17 @@ const compounds = [
       "Agbede Adodo represents the technological and spiritual engine room of early Ibadan. As the city's first and most ancient blacksmith workshop, it earned the title of 'the Originators'. In the 19th-century warlord era, the workshop was the primary forge for the Agada swords, spears, and arrowheads used by Balogun Ibikunle and Basorun Ogunmola. As gunpowder warfare arrived, it became Ibadan's military maintenance hub, repairing firearms and casting lead ammunition for the Kiriji War. Furthermore, it forged the essential farming tools that fed the city, served as a sacred Ogun sanctuary for weapon consecration, and functioned as a secret strategic council where war leaders gathered.",
     heritage: "First and most ancient blacksmith workshop in Ibadan; weapon-forgers for Balogun Ibikunle and Basorun Ogunmola, and sacred spiritual engine room of early Ibadan.",
   },
+  {
+    id: "oladimeji",
+    name: "Oladimeji Compound",
+    yoruba: "Agbo Ilé Oladimeji",
+    location: "Inalende, Ibadan North-West Local Government, Ibadan",
+    quarter: "Inalende / Ibadan North-West",
+    mogaji: "Mogaji Oladimeji",
+    description:
+      "Standing in the heart of Inalende, Oladimeji Compound is the ancestral home of warriors from Songbe (near Ede, Osun State) who served Ibadan as frontline commanders for generations. The founding ancestor, Oladimeji, fought in early campaigns alongside Balogun Ajobiare before being installed as Asaaju Ogun (The War Commander) by legendary Generalissimo Balogun Ibikunle. Beyond battlefield exploits, the house preserves deep traditions of communal discipline, unity, and the revered Gbere Agba masquerade. In 2015, during the reign of Olubadan Odulana Odugade I, Mogaji Oladimeji was installed as the compound's first official Mogaji.",
+    heritage: "War commander lineage from Songbe (near Ede); home of Asaaju Ogun under Balogun Ibikunle, and custodians of the Gbere Agba masquerade.",
+  },
 ];
 
 const historicQuarters = [

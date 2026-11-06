@@ -8,6 +8,8 @@ export const metadata: Metadata = {
     "Agbo Ile Ibadan",
     "Ibadan Compounds",
     "Agbede Adodo Compound",
+    "Oladimeji Compound",
+    "Inalende Quarter",
     "Olorisa Compound",
     "Odugade Compound",
     "Ile Toki",

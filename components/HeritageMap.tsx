@@ -231,6 +231,19 @@ const mapCompounds: MapCompoundNode[] = [
     desc: "The technological and spiritual engine room of early Ibadan. Originators of metallurgy in Ibadan, weapon-forgers for Balogun Ibikunle and Basorun Ogunmola, firearm maintenance hub during the Kiriji War, and sacred sanctuary of Ogun.",
     image: "/images/mogaji-agbede-adodo.jpg",
   },
+  {
+    id: "oladimeji",
+    name: "Oladimeji Compound",
+    yoruba: "Agbo Ilé Oladimeji",
+    quarter: "Central / Aremo",
+    location: "Inalende, Ibadan North-West LGA",
+    mogaji: "Mogaji Oladimeji",
+    era: "19th Century Asaaju Ogun (Songbe / Ede Origin)",
+    x: 40,
+    y: 40,
+    desc: "Home of warriors and frontline commanders from Songbe (near Ede). Founding ancestor Oladimeji fought under Balogun Ajobiare and was named Asaaju Ogun by Balogun Ibikunle. Custodians of Gbere Agba masquerade.",
+    image: "/images/mogaji-oladimeji.jpg",
+  },
 ];
 
 const quartersList = [

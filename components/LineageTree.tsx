@@ -458,6 +458,48 @@ const lineageTrees: Record<string, LineageTreeData> = {
       ],
     },
   },
+
+  oladimeji: {
+    mogajiId: "oladimeji",
+    familyName: "Oladimeji Family Lineage",
+    compoundName: "Oladimeji Compound (Inalende, Ibadan North-West)",
+    yoruba: "Ìdílé Oladimeji · Àwọn Aṣáájú Ogun",
+    root: {
+      id: "oladimeji-gen1",
+      name: "Oladimeji (Founding Patriarch)",
+      title: "Warrior Commander & Asaaju Ogun under Balogun Ibikunle",
+      generation: "1st Generation",
+      era: "19th Century (Origin: Songbe, near Ede, Osun State)",
+      role: "Compound Founder, Soldier & Frontline Commander",
+      status: "Lineage Founder",
+      bio: "Founding patriarch of Oladimeji Compound who migrated from Songbe near Ede to Ibadan. An intrepid soldier who fought in Ibadan's early campaigns alongside Balogun Ajobiare, his exceptional valor led Balogun Ibikunle to install him as Asaaju Ogun (The War Commander). He led troops on the frontlines to defend and expand Ibadan, establishing the family seat at Inalende.",
+      children: [
+        {
+          id: "oladimeji-gen2",
+          name: "Oladimeji Lineage Elders",
+          title: "Custodians of Family Discipline & Gbere Agba Masquerade",
+          generation: "Successive Generations",
+          era: "19th – 20th Century",
+          role: "Lineage Bearers & Cultural Keepers",
+          status: "Lineage Elder",
+          bio: "Across generations in Inalende, the elders of Oladimeji Compound maintained the values of service, discipline, and mutual respect that sustained the compound. They preserved the family's unity and remained proud custodians of the venerable ancestral masquerade, Gbere Agba.",
+          children: [
+            {
+              id: "oladimeji-gen3",
+              name: "Mogaji Oladimeji",
+              title: "First Mogaji of Oladimeji Compound",
+              generation: "Incumbent Mogaji",
+              era: "2015 – Present",
+              role: "Incumbent Mogaji & Community Leader",
+              status: "Incumbent Mogaji",
+              bio: "Installed in 2015 under the reign of Oba (Dr) Samuel Osundiran Odulana Odugade I with the unanimous endorsement of all Oladimeji descendants. Serving as the compound's first official Mogaji, he champions youth education, elder care, and compound unity, honoring his ancestors' motto: 'Our ancestors were commanders who put Ibadan first; today, our mission is to raise leaders through education.'",
+              image: "/images/mogaji-oladimeji.jpg",
+            },
+          ],
+        },
+      ],
+    },
+  },
 };
 
 export default function LineageTree({

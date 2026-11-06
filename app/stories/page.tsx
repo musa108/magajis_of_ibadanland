@@ -31,6 +31,17 @@ const featuredStories = [
     tags: ["Agbede Adodo", "Blacksmiths", "Ogun", "Military", "Kiriji War"],
   },
   {
+    id: "oladimeji-war-commanders",
+    category: "Àwọn Mògájì · Warrior Lineage",
+    yorubaTitle: "Àwọn Aṣáájú Ogun Ilé Oladimeji",
+    title: "Oladimeji Compound: The House of War Commanders at Inalende",
+    excerpt:
+      "A home of warriors from Songbe near Ede who served Ibadan as frontline commanders for generations. Patriarch Oladimeji fought under Balogun Ajobiare before being installed as Asaaju Ogun by Balogun Ibikunle. Today, under its first Mogaji, the house turns that legacy of discipline into a mission of youth education and community unity.",
+    date: "19th Century — Present",
+    readTime: "7 min read",
+    tags: ["Oladimeji", "Inalende", "Asaaju Ogun", "Balogun Ibikunle", "Warriors"],
+  },
+  {
     id: "olubadan-succession",
     category: "Ìjọba Ìbílẹ̀ · Chieftaincy",
     yorubaTitle: "Ìlànà Ìtẹ̀ Olúbàdàn",
