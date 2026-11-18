@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Commissioning of Gbọ̀ngàn Mògájì Ilé Ẹ̀kẹ́ · Official Opening by Olubadan",
