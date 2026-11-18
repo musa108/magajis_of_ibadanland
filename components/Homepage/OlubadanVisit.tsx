@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -76,10 +76,10 @@ export default function OlubadanVisit() {
                 Location: Gbọ̀ngàn Mògájì Ilé Ẹ̀kẹ́ Complex
               </span>
               <Link
-                href="/ile-eke#royal-visit"
+                href="/ile-eke#commissioning"
                 className="group inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-[#d4b56e] hover:text-white transition"
               >
-                <span>Full Gallery & Coverage</span>
+                <span>Full Commissioning Coverage</span>
                 <ArrowUpRight size={13} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>

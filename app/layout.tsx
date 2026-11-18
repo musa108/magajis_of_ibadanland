@@ -4,24 +4,19 @@ import "./globals.css";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
-  subsets: ["latin", "latin-ext"],
-  weight: ["500", "600", "700", "800", "900"],
+  subsets: ["latin"],
   display: "swap",
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
-  style: ["normal", "italic"],
+  subsets: ["latin"],
   display: "swap",
 });
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
-  style: ["normal", "italic"],
+  subsets: ["latin"],
   display: "swap",
 });
 

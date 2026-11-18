@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -46,7 +46,7 @@ export default function IleEkePreview() {
           >
             <p className="text-base leading-relaxed text-[#f4f0e7]/80 sm:text-lg sm:leading-8 font-sans">
               The grand parliamentary hall and civic council secretariat of the{" "}
-              <span className="text-white font-medium">Association of Mogajis of Ibadanland</span>. A monumental traditional complex built to house council conventions, royal arbitrations, and lineage archival preservation.
+              <span className="text-white font-medium">Association of Mogajis of Ibadanland</span>. A monumental traditional complex officially opened and commissioned on 14th November 2026 by His Imperial Majesty Oba Senator Rashidi Adewolu Ladoja (Arusa I) to house council conventions, royal arbitrations, and lineage archival preservation.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-5">
@@ -54,7 +54,7 @@ export default function IleEkePreview() {
                 href="/ile-eke"
                 className="group inline-flex items-center gap-3 border border-[#b89a5a] bg-[#b89a5a] px-6 py-3.5 text-xs font-bold uppercase tracking-[0.2em] text-[#07111f] transition hover:bg-[#d4b56e]"
               >
-                <span>Explore Ilé Ẹ̀kẹ́ Project</span>
+                <span>Explore Commissioned Complex</span>
                 <ArrowUpRight
                   size={14}
                   className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -97,7 +97,7 @@ export default function IleEkePreview() {
               <div className="absolute top-4 left-4 z-10 flex items-center gap-2 border border-[#b89a5a]/60 bg-[#07111f]/90 px-3.5 py-1.5 backdrop-blur-md">
                 <CheckCircle2 size={13} className="text-[#d4b56e]" />
                 <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.2em] text-[#d4b56e]">
-                  Present Condition · Exterior Completed
+                  Commissioned · 14th November 2026
                 </span>
               </div>
             </div>
